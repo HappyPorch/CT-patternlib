@@ -7,8 +7,8 @@
 
 #patternlab
 export/*
-source/styleguide/*
 public/*
 !public/.gitkeep
 !public/index.html
+!public/styleguide/*
 
