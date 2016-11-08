@@ -2,9 +2,114 @@
  * YOUR STYLES HERE
  */
 
+ body {
+ 	font-size: 12px;
+ 	line-height: 1.5em;
+ }
+/*text*/
+ h1, h1 a {
+ 	font-size: 2em;
+ 	font-weight: bold;
+ 	color: #00494f !important;
+ }
+
+ h2, h2 a {
+ 	font-size: 1.6em;
+ 	font-weight: bold;
+ 	color: #00494f !important;
+ }
+
+ h2::before {
+ 	content: '\003e''\003e''\00a0';
+ 	color: #00494f;
+ }
+
+ h3, h3 a {
+ 	font-size: 1.3;
+ 	color: #000000 !important;
+ 	font-weight: normal !important;
+ 	text-align: center;
+ }
+
+ h4, h4 a {
+ 	font-size: 1.2 !important;
+ 	font-weight: bold;
+ 	text-transform: uppercase;
+ }
+
+ h5, h5 a {
+ 	font-size: 1em !important;
+ 	color: #000 !important;
+ 	font-weight: bold !important;
+ }
+
+ p {
+ 	line-height: 1.5em;
+ }
+
+ a.link {
+ 	color: #031bf7 !important;
+ 	cursor: pointer;
+ }
+
+ a.link:hover {
+ 	text-decoration: underline;
+ }
+
+/*buttons*/
+ .btn {
+ 	border-radius: 20px !important;
+ } 
+ .btn-primary {
+ 	background-color: #00494f !important;
+ 	color: #ffffff;
+ } 
+ .btn-danger {
+  	background-color: #ffffff !important;
+  	color: #ff0303 !important;
+  	border-color: #ff0303 !important;
+  }
+  .btn-danger:hover {
+  	background-color: #ff0303 !important;
+  	color: #ffffff !important; 
+  }
+
+/*forms*/
  input, textarea {
  	width: 100%;
  	height: 30px;
  	border: 1px solid;
  	padding: 5px;
+ }
+ .alert {
+  	border: 1px solid #ff0303;
+ }
+
+/*tables*/
+ tr.unread {
+  	background-color: #ffffe0 !important;
+  	font-weight: bold;
+ }
+ .list-status {
+  	width: 20px;
+  	height: 20px;
+ }
+ .list-status.status-red {
+  	background-color: #ff0303;
+  }
+ .list-status.status-green {
+ 	background-color: #08ff3c;
+ }
+ .list-status.status-yellow {
+ 	background-color: #ffed0b;
+ }
+ .list-status.status-none {
+ 	background-color: #cccccc;
+ }
+
+ /*info box*/
+ .info-box {
+ 	border: 2px solid #cae3f2;
+ 	border-radius: 5px;
+ 	padding: 20px;
  }
