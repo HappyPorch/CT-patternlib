@@ -85,13 +85,20 @@
   	border: 1px solid #ff0303;
  }
 
- /*list-menu : todo: Rocio to update*/
+ /*list-menu : todo: Rocio to update based on design*/
  .list-menu>li {
    margin: 8px;
  }
  .list-menu li li {
    border-right: 1px solid black;
  }
+
+
+ /* navbar-default : todo: Rocio to update based on design*/
+header .navbar-default {
+   background-color: transparent;
+   border: none;
+}
 
 /*tables*/
  tr.unread {
