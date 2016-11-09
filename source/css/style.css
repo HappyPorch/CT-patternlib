@@ -59,11 +59,11 @@
 /*buttons*/
  .btn {
  	border-radius: 20px !important;
- } 
+ }
  .btn-primary {
  	background-color: #00494f !important;
  	color: #ffffff;
- } 
+ }
  .btn-danger {
   	background-color: #ffffff !important;
   	color: #ff0303 !important;
@@ -71,7 +71,7 @@
   }
   .btn-danger:hover {
   	background-color: #ff0303 !important;
-  	color: #ffffff !important; 
+  	color: #ffffff !important;
   }
 
 /*forms*/
@@ -83,6 +83,14 @@
  }
  .alert {
   	border: 1px solid #ff0303;
+ }
+
+ /*list-menu : todo: Rocio to update*/
+ .list-menu>li {
+   margin: 8px;
+ }
+ .list-menu li li {
+   border-right: 1px solid black;
  }
 
 /*tables*/

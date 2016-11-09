@@ -1,8 +1,5 @@
 <ol>
-    <li> Item </li>
-    <li> Item </li>
-    <li> Item </li>
-    <li> Item </li>
-    <li> Item </li>
-    <li> Item </li>
+    {% for i in 1..4 %}
+        <li> Item {{ i }}</li>
+    {% endfor %}
 </ol>
