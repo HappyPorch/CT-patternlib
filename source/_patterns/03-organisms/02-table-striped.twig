@@ -1,90 +1,123 @@
 <table class="table table-striped">
-	<th>
-		<span class="caret"></span>
-		<h5>Status</h5>
-	</th>
-	<th>
-		<span class="caret"></span>
-		<h5>Case</h5>
-	</th>
-	<th>
-		<span class="caret"></span>
-		<h5>Referral</h5>
-	</th>
-	<th>
-		<span class="caret"></span>
-		<h5>Query</h5>
-	</th>
-	<th>
-		<span class="caret"></span>
-		<h5>Last message</h5>
-	</th>
-	<th>
-		<span class="caret"></span>
-		<h5>Allocated</h5>
-	</th>
-	<th>
-		<span class="caret"></span>
-		<h5>Patient</h5>
-	</th>
-	<th>
-		<span class="caret"></span>
-		<h5>Sex</h5>
-	</th>
-	<th>
-		<span class="caret"></span>
-		<h5>Age</h5>
-	</th>
-	<th>
-		<span class="caret"></span>
-		<h5>Referrer</h5>
-	</th>
-
+	<tr>
+		<th>
+			<span class="caret"></span>
+			<h5>Status</h5>
+		</th>
+		<th>
+			<span class="caret"></span>
+			<h5>Case</h5>
+		</th>
+		<th>
+			<span class="caret"></span>
+			<h5>Referral</h5>
+		</th>
+		<th>
+			<span class="caret"></span>
+			<h5>Query</h5>
+		</th>
+		<th>
+			<span class="caret"></span>
+			<h5>Last message</h5>
+		</th>
+		<th>
+			<span class="caret"></span>
+			<h5>Allocated</h5>
+		</th>
+		<th>
+			<span class="caret"></span>
+			<h5>Patient</h5>
+		</th>
+		<th>
+			<span class="caret"></span>
+			<h5>Sex</h5>
+		</th>
+		<th>
+			<span class="caret"></span>
+			<h5>Age</h5>
+		</th>
+		<th>
+			<span class="caret"></span>
+			<h5>Referrer</h5>
+		</th>
+</tr>
 <tr>
-	<td><div class="list-status status-red"></div></td>
+	<td><i class="fa fa-square status-red" aria-hidden="true"></i></td>
 	<td>160</td>
 	<td>P</td>
 	<td>1</td>
-	<td>This patient</td>
-	<td><span>17:31</span>26-Jul-2016</td>
+	<td class="patient-cell">
+		<div class="check-patient">{% include "atoms-check-mark-icon" %}</div>
+		This patient
+	</td>
+	<td class="date-cell">
+		26-Jul-2016
+		<sup>17:31</sup>
+	</td>
 	<td>1234567890abc</td>
-	<td>heart</td>
+	<td class="icon-cell">
+		{% include "atoms-heartbeat-icon" %}
+	</td>
 	<td>21</td>
 	<td><a class="link">Mr Donald Duck</a></td>
 </tr>
 <tr>
-	<td><div class="list-status status-green"></td>
+	<td><i class="fa fa-square status-green" aria-hidden="true"></i></td>
 	<td>160</td>
 	<td>P</td>
 	<td>1</td>
-	<td>This patient</td>
-	<td><span>17:31</span>26-Jul-2016</td>
+	<td class="patient-cell">
+		<div class="check-patient">{% include "atoms-check-mark-icon" %}</div>
+		This patient
+	</td>
+	<td class="date-cell">
+		26-Jul-2016
+		<sup>17:31</sup>
+	</td>
 	<td>1234567890abc</td>
-	<td>heart</td>
+	<td class="icon-cell">
+		{% include "atoms-heartbeat-icon" %}
+	</td>
 	<td>21</td>
 	<td><a class="link">Mr Donald Duck</a></td>
 </tr>
 <tr>
-	<td><div class="list-status status-yellow"></td>
+	<td><i class="fa fa-square status-yellow" aria-hidden="true"></i></td>
 	<td>160</td>
 	<td>P</td>
 	<td>1</td>
-	<td>This patient</td>
-	<td><span>17:31</span>26-Jul-2016</td>
+	<td class="patient-cell">
+		<div class="check-patient">{% include "atoms-check-mark-icon" %}</div>
+		This patient
+	</td>
+	<td class="date-cell">
+		26-Jul-2016
+		<sup>17:31</sup>
+	</td>
 	<td>1234567890abc</td>
-	<td>heart</td>
+	<td class="icon-cell">
+		{% include "atoms-heartbeat-icon" %}
+	</td>
 	<td>21</td>
 	<td><a class="link">Mr Donald Duck</a></td>
 </tr>
 <tr class="unread">
-	<td><div class="list-status status-none"></td>
+	<td><i class="fa fa-square status-none" aria-hidden="true"></i></td>
 	<td>160</td>
 	<td>P</td>
 	<td>1</td>
-	<td>This patient</td>
-	<td><span>17:31</span>26-Jul-2016</td>
+	<td class="patient-cell">
+		<div class="check-patient">{% include "atoms-exclamation-icon" %}</div>
+		This patient
+	</td>
+	<td class="date-cell">
+		26-Jul-2016
+		<sup>17:31</sup>
+	</td>
 	<td>1234567890abc</td>
-	<td>heart</td>
+	<td class="icon-cell">
+		{% include "atoms-heartbeat-icon" %}
+	</td>
 	<td>21</td>
 	<td><a class="link">Mr Donald Duck</a></td>
 </tr>
