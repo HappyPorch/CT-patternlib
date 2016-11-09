@@ -228,10 +228,7 @@ class Builder {
 				}
 
 				// write out the various pattern files
-				echo "Generating file:".$patternPublicDir."/".$path."/".$path.$suffixRendered.".html"."\n";
-				if (file_put_contents($patternPublicDir."/".$path."/".$path.$suffixRendered.".html",$markupFull) === false) {
-					echo "ERROR writing file!\n";
-				}
+				file_put_contents($patternPublicDir."/".$path."/".$path.$suffixRendered.".html",$markupFull);
 				if (!$exportFiles) {
 					file_put_contents($patternPublicDir."/".$path."/".$path.$suffixMarkupOnly.".html",$markup);
 					file_put_contents($patternPublicDir."/".$path."/".$path.$suffixRaw.".".$patternExtension,$markupEngine);
