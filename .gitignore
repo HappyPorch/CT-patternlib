@@ -1,5 +1,4 @@
-#mac
-.DS_Store
+
 
 # Komodo
 .komodotools
@@ -13,3 +12,6 @@ public/*
 !public/styleguide/*
 public/styleguide/data/*
 public/styleguide/html/*
+
+#mac
+.DS_Store
