@@ -1,44 +1,65 @@
 <table class="table table-striped">
 	<tr>
 		<th>
-			<span>{% include "atoms-sort-icon" %}</span>
-			<h5>Status</h5>
+			<a>
+				<span>{% include "atoms-sort-icon" %}</span>
+				<h5>Status</h5>
+			</a>
 		</th>
 		<th>
-			<span>{% include "atoms-sort-icon" %}</span>
-			<h5>Case</h5>
+			<a class="active asc">
+				<span>{% include "atoms-sort-icon" %}</span>
+				<h5>Case</h5>
+				<div class="table-sorter">{% include "atoms-arrow-up-icon" %}</div>
+			</a>
 		</th>
 		<th>
-			<span>{% include "atoms-sort-icon" %}</span>
-			<h5>Referral</h5>
+			<a>
+				<span>{% include "atoms-sort-icon" %}</span>
+				<h5>Referral</h5>
+			</a>
 		</th>
 		<th>
-			<span>{% include "atoms-sort-icon" %}</span>
-			<h5>Query</h5>
+			<a>
+				<span>{% include "atoms-sort-icon" %}</span>
+				<h5>Query</h5>
+			</a>
 		</th>
 		<th>
-			<span>{% include "atoms-sort-icon" %}</span>
-			<h5>Last message</h5>
+			<a>
+				<span>{% include "atoms-sort-icon" %}</span>
+				<h5>Last message</h5>
+			</a>
 		</th>
 		<th>
-			<span>{% include "atoms-sort-icon" %}</span>
-			<h5>Allocated</h5>
+			<a>
+				<span>{% include "atoms-sort-icon" %}</span>
+				<h5>Allocated</h5>
+			</a>
 		</th>
 		<th>
-			<span>{% include "atoms-sort-icon" %}</span>
-			<h5>Patient</h5>
+			<a>
+				<span>{% include "atoms-sort-icon" %}</span>
+				<h5>Patient</h5>
+			</a>
 		</th>
 		<th>
-			<span>{% include "atoms-sort-icon" %}</span>
-			<h5>Sex</h5>
+			<a>
+				<span>{% include "atoms-sort-icon" %}</span>
+				<h5>Sex</h5>
+			</a>
 		</th>
 		<th>
-			<span>{% include "atoms-sort-icon" %}</span>
-			<h5>Age</h5>
+			<a>
+				<span>{% include "atoms-sort-icon" %}</span>
+				<h5>Age</h5>
+			</a>
 		</th>
 		<th>
-			<span>{% include "atoms-sort-icon" %}</span>	
-			<h5>Referrer</h5>
+			<a>
+				<span>{% include "atoms-sort-icon" %}</span>	
+				<h5>Referrer</h5>
+			</a>
 		</th>
 </tr>
 <tr>
@@ -47,7 +68,7 @@
 	<td>P</td>
 	<td>1</td>
 	<td class="patient-cell">
-		<div class="check-patient">{% include "atoms-check-mark-icon" %}</div>
+		<div class="check-patient"><a class="read" href="">{% include "atoms-exclamation-icon" %}</a></div>
 		This patient
 	</td>
 	<td class="date-cell">
@@ -67,7 +88,7 @@
 	<td>P</td>
 	<td>1</td>
 	<td class="patient-cell">
-		<div class="check-patient">{% include "atoms-check-mark-icon" %}</div>
+		<div class="check-patient"><a class="read" href="">{% include "atoms-exclamation-icon" %}</a></div>
 		This patient
 	</td>
 	<td class="date-cell">
@@ -87,7 +108,7 @@
 	<td>P</td>
 	<td>1</td>
 	<td class="patient-cell">
-		<div class="check-patient">{% include "atoms-check-mark-icon" %}</div>
+		<div class="check-patient"><a class="read" href="">{% include "atoms-exclamation-icon" %}</a></div>
 		This patient
 	</td>
 	<td class="date-cell">
@@ -107,7 +128,7 @@
 	<td>P</td>
 	<td>1</td>
 	<td class="patient-cell">
-		<div class="check-patient">{% include "atoms-exclamation-icon" %}</div>
+		<div class="check-patient"><a class="non-read" href="">{% include "atoms-exclamation-icon" %}</a></div>
 		This patient
 	</td>
 	<td class="date-cell">
@@ -122,3 +143,4 @@
 	<td><a class="link">Mr Donald Duck</a></td>
 </tr>
 </table>
+{% include "molecules-table-footer" %}
