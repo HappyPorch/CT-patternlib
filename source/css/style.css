@@ -268,6 +268,20 @@ div.summary-list dl {
    margin-bottom: 0;
 }
 
+/*message-panel*/
+.message-panel .row {
+   border: 1px solid #ccc;
+}
+.message-panel .row.panel-head {
+   border-bottom: 0;
+   font-size: 0.8em
+}
+
+.message-panel .row.panel-head span {
+   float: right;
+   color: #ccc;
+}
+
  /*info box*/
  .info-box {
  	border: 2px solid #cae3f2;
