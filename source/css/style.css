@@ -78,9 +78,15 @@
   background: none;
  }
  .tech-info {
-  font-size: 6px;
+  font-size: 8px;
   text-align: center;
-  color: #f2f2f2;
+  color: #e6e6e6;
+ }
+ .tech-info img {
+     width: 8px;
+     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+     filter: alpha(opacity=25);
+     opacity: 0.25;
  }
 /*icons*/
 .fa-arrow-left,
