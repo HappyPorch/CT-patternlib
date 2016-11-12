@@ -270,6 +270,17 @@ li a.menu-button {
     padding-bottom: 99999px;
 }
 
+/* assumes not responsive row */
+.is-table-row {
+    display: table;
+}
+.is-table-row [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
+
+
  /*lists*/
  @media (min-width: 768px) {
    .dl-horizontal.dl-left dt {
@@ -295,6 +306,10 @@ div.summary-list dl {
 .message-panel .row.panel-head {
    border-bottom: 0;
    font-size: 0.8em
+}
+.message-panel [class*="col-"] {
+   padding-top:  8px;
+   padding-bottom:  8px;
 }
 
 .message-panel .row.panel-head span {
