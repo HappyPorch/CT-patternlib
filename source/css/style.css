@@ -302,6 +302,7 @@ div.summary-list dl {
 /*message-panel*/
 .message-panel .row {
    border: 1px solid #ccc;
+   margin-left: 0; margin-right: 0;
 }
 .message-panel .row.panel-head {
    border-bottom: 0;
