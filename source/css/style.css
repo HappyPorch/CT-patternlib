@@ -260,6 +260,16 @@ li a.menu-button {
   font-weight: bold;
  }
 
+ /*lists*/
+ @media (min-width: 768px) {
+   .dl-horizontal.dl-left dt {
+     width: auto;
+   }
+   .dl-horizontal.dl-left dd {
+     margin-left: 120px;
+   }
+ }
+
 /*summary panel*/
 div.summary-list {
   padding: 5px;
