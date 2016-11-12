@@ -259,6 +259,15 @@ li a.menu-button {
   text-align: right;
   font-weight: bold;
  }
+
+/*summary panel*/
+div.summary-list {
+  padding: 5px;
+}
+div.summary-list dl {
+   margin-bottom: 0;
+}
+
  /*info box*/
  .info-box {
  	border: 2px solid #cae3f2;
