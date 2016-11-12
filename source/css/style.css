@@ -69,18 +69,18 @@
  a.footer-txtlink:before {
   content: '\003e''\00a0';
  }
- .dropdown-menu>li:focus, 
+ .dropdown-menu>li:focus,
  .dropdown-menu>li:hover {
   background-color: #cae3f2 !important;
  }
- .dropdown-menu>li>a:focus, 
+ .dropdown-menu>li>a:focus,
  .dropdown-menu>li>a:hover {
   background: none;
  }
  .tech-info {
   font-size: 6px;
   text-align: center;
-  color: #f2f2f2; 
+  color: #f2f2f2;
  }
 /*icons*/
 .fa-arrow-left,
@@ -200,7 +200,7 @@
 }
 .top-nav .navbar-header {
   display: inline-block;
-  width: auto;  
+  width: auto;
   float: right;
   top: 0;
   right: 0;
@@ -258,7 +258,7 @@ li a.menu-button {
  	border: 2px solid #cae3f2;
  	border-radius: 5px;
  	padding: 20px;
- } 
+ }
  .date-cell sup {
   top: -1em;
   color: #b3b3b3  ;
@@ -321,7 +321,7 @@ li a.menu-button {
   ul.footer-menu-list li {
     list-style: none;
     padding: 17px 10px;
-    border-left: 2px solid #cae3f2; 
+    border-left: 2px solid #cae3f2;
   }
   .footer-nav button {
     margin-right: 10px;
@@ -355,6 +355,18 @@ li a.menu-button {
   }
   .bg-light-yellow {
     background-color: #ffffe0;
+  }
+  .bg-green {
+    background-color: #08ff3c;
+  }
+  .bg-yellow {
+    background-color: #ffed0b;
+  }
+  .bg-red {
+    background-color: #ff0303;
+  }
+  .bg-blue {
+    background-color: #031bf7;
   }
 
 
