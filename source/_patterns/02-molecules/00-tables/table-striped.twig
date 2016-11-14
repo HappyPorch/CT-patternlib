@@ -1,67 +1,76 @@
+<div class="panel panel-default">
+<div class="panel-body">
 <table class="table table-striped">
-	<tr>
+	<thead>
+		<tr>
 		<th>
 			<a>
-				<span>{% include "atoms-sort-icon" %}</span>
-				<h5>Status</h5>
+				<div class="asc-desc">{% include "atoms-sort-icon" %}</div>
+				<div><h5>Status</h5></div>
 			</a>
 		</th>
 		<th>
 			<a class="active asc">
-				<span>{% include "atoms-sort-icon" %}</span>
-				<h5>Case</h5>
+				<div class="asc-desc">{% include "atoms-sort-icon" %}</div>
+				<div><h5>Case</h5></div>
 				<div class="table-sorter">{% include "atoms-arrow-up-icon" %}</div>
 			</a>
 		</th>
 		<th>
 			<a>
-				<span>{% include "atoms-sort-icon" %}</span>
-				<h5>Referral</h5>
+				<div class="asc-desc">{% include "atoms-sort-icon" %}</div>
+				<div><h5>Referral</h5></div>
 			</a>
 		</th>
 		<th>
 			<a>
-				<span>{% include "atoms-sort-icon" %}</span>
-				<h5>Query</h5>
+				<div class="asc-desc">{% include "atoms-sort-icon" %}</div>
+				<div><h5>Query</h5></div>
 			</a>
 		</th>
 		<th>
 			<a>
-				<span>{% include "atoms-sort-icon" %}</span>
-				<h5>Last message</h5>
+				<div class="asc-desc">{% include "atoms-sort-icon" %}</div>
+				<div><h5>Last message</h5></div>
 			</a>
 		</th>
 		<th>
 			<a>
-				<span>{% include "atoms-sort-icon" %}</span>
-				<h5>Allocated</h5>
+				<div class="asc-desc">{% include "atoms-sort-icon" %}</div>
+				<div><h5>Allocated</h5></div>
 			</a>
 		</th>
 		<th>
 			<a>
-				<span>{% include "atoms-sort-icon" %}</span>
-				<h5>Patient</h5>
+				<div class="asc-desc">{% include "atoms-sort-icon" %}</div>
+				<div><h5>Patient</h5></div>
 			</a>
 		</th>
 		<th>
 			<a>
-				<span>{% include "atoms-sort-icon" %}</span>
-				<h5>Sex</h5>
+				<div class="asc-desc">{% include "atoms-sort-icon" %}</div>
+				<div><h5>Sex</h5></div>
 			</a>
 		</th>
 		<th>
 			<a>
-				<span>{% include "atoms-sort-icon" %}</span>
-				<h5>Age</h5>
+				<div class="asc-desc">{% include "atoms-sort-icon" %}</div>
+				<div><h5>Age</h5></div>
 			</a>
 		</th>
 		<th>
 			<a>
-				<span>{% include "atoms-sort-icon" %}</span>
-				<h5>Referrer</h5>
+				<div class="asc-desc">{% include "atoms-sort-icon" %}</div>
+				<div><h5>Referrer</h5></div>
 			</a>
 		</th>
-</tr>
+	</tr>
+</thead>
+<tfoot style="background-color: #f2f2f2;">
+	<tr>
+		<td colspan="10">{% include "atoms-table-footer" %}</td>
+	</tr>
+</tfoot>
 <tr>
 	<td><i class="fa fa-square status-red" aria-hidden="true"></i></td>
 	<td>160</td>
@@ -143,4 +152,8 @@
 	<td><a class="link">Mr Donald Duck</a></td>
 </tr>
 </table>
-{% include "atoms-table-footer" %}
+</div>
+	<div class="panel-footer">
+		{% include "atoms-table-footer" %}
+	</div>
+</div>

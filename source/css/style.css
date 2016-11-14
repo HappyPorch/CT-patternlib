@@ -155,7 +155,7 @@
     border: 2px solid #00494f;
     color: #00494f;
   }
-  .info-button:active .fa {
+  .info-box-toggle.active > .info-button .fa {
     color: #333333;
     background-color: #cae3f2;
     border-color: #cae3f2;
@@ -175,13 +175,19 @@ fieldset {
    padding: 10px !important;
    margin-bottom: 15px !important;
 }
+.help-block {
+  background-color: #ffffe0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #4d4d4d;
+  font-style: italic;
+}
 
  /*list-menu : todo: Rocio to update based on design*/
- .list-menu>li {
-   margin: 8px;
- }
- .list-menu li li {
-   border-right: 1px solid black;
+ .breadcrumb {
+  background: none;
+  margin-bottom: 0px;
+  padding: 8px 5px;
  }
 
 /*navbar*/
@@ -212,6 +218,7 @@ fieldset {
 .navbar-toggle {
   border: none;
   padding: 0;
+  margin-right: 0
 }
 .navbar-collapse {
   border: none;
@@ -223,6 +230,10 @@ fieldset {
 .top-nav .navbar-collapse ul li {
   display: inline-block;
 }
+.top-nav li a > span {
+  vertical-align: text-bottom;
+  margin-left: 5px;
+}
 li a.menu-button {
   padding: 10px 20px;
 }
@@ -233,6 +244,10 @@ li a.menu-button {
    background-color: transparent;
    border: none;
    border-radius: none;
+}
+.navbar-right {
+  margin-right: 15px !important;
+  float: right;
 }
 .navbar-right li {
   border-left: 2px solid #cae3f2;
@@ -248,6 +263,7 @@ li a.menu-button {
  }
  .table-sorter {
   float: right;
+  margin-left: 5px;
  }
  .summary-table td {
   padding: 5px;
@@ -256,12 +272,25 @@ li a.menu-button {
   text-align: right;
   font-weight: bold;
  }
-
+ .tfoot {
+  background-color: #f2f2f2;
+ }
+ .table.table-striped>thead>tr>th {
+  vertical-align: baseline;
+ }
+ .table-striped th a {
+  display: flex;
+ }
+ .table-striped th a:hover {
+  text-decoration: none;
+ }
+ .asc-desc {
+  margin-right: 3px;
+ }
  /* from https://scotch.io/bar-talk/different-tricks-on-how-to-make-bootstrap-columns-all-the-same-height */
  .row.match-my-cols {
     overflow: hidden;
 }
-
 .row.match-my-cols [class*="col-"]{
     margin-bottom: -99999px;
     padding-bottom: 99999px;
@@ -276,17 +305,6 @@ li a.menu-button {
     display: table-cell;
     vertical-align: top;
 }
-
-
- /*lists*/
- @media (min-width: 768px) {
-   .dl-horizontal.dl-left dt {
-     width: auto;
-   }
-   .dl-horizontal.dl-left dd {
-     margin-left: 120px;
-   }
- }
 
 /*summary panel*/
 div.summary-list {
@@ -314,12 +332,28 @@ div.summary-list dl {
    float: right;
    color: #ccc;
 }
-
  /*info box*/
  .info-box {
  	border: 2px solid #cae3f2;
  	border-radius: 5px;
- 	padding: 20px;
+ 	position: relative;
+  margin-top: 35px;
+ }
+ .show-info {
+  display: block;
+ }
+ .hide-info {
+  display: none;
+ }
+ .info-box-toggle {
+  float: right;
+ }
+ .info-box-toggle > .info-button > i {
+  margin: 0;
+ }
+ /*tables*/
+ .date-cell {
+  white-space: nowrap;
  }
  .date-cell sup {
   top: -1em;
@@ -336,18 +370,8 @@ div.summary-list dl {
  tr > td {
   padding-left: 20px !important;
  }
- .show-info {
-  display: block;
- }
- .hide-info {
-  display: none;
- }
- .info-box-toggle > .info-button > i {
-  margin: 0;
- }
  .table-footer {
-  float: right;
-  margin-right: 20px;
+  text-align: right;
  }
  /*helpers*/
  .vertical-space {
@@ -392,11 +416,9 @@ div.summary-list dl {
     vertical-align: super;
     margin-left: 10px;
   }
-
   .header-container {
     width: 100%;
   }
-
   .header-container .main-logo {
     float: left;
   }
@@ -440,10 +462,25 @@ div.summary-list dl {
       margin: 0 !important;
   }
   ul.footer-menu-list li {
-    display: inline-block !important;
+    display: table-cell !important;
     width: auto;
     border-top: none;
     padding: 12px 5px 14px;
+  }
+  .navbar-top {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none !important;
+  }
+  .navbar-top li {
+    border: none;
+  }
+  .dl-horizontal.dl-left dt {
+    width: auto;
+  }
+  .dl-horizontal.dl-left dd {
+    margin-left: 120px;
   }
 }
 

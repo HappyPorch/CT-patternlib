@@ -10,6 +10,7 @@ $('.footer-menu-btn').click(function(){
 });
 
 $('.info-box-toggle').click(function(){
-	$('.info-box-display').toggleClass('show-info')
-						  .toggleClass('hide-info');	
+	$('.info-box').toggleClass('show-info')
+				  .toggleClass('hide-info');
+	$('.info-box-toggle').toggleClass('active');	
 })
