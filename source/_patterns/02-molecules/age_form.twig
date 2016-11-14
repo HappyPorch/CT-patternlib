@@ -1,0 +1,36 @@
+
+<fieldset>
+<div class="form-group">
+	<label for="" class="col-sm-2 control-label">Age:</label>
+	<div class="col-sm-10">
+        <div class="row">
+            <div class="col-xs-4">
+                <input maxlength="10" size="10" id="age" name="age" onkeyup="dob_disabled()" onchange="select_unit()" class="form-control" />
+            </div>
+            <div class="col-xs-4">
+                <select name="age_unit" id="age_unit" onchange="select_unit()" class="form-control">
+                    <option value=""></option>
+                    <option value="yr">years</option>
+                    <option value="mon">months</option>
+                    <option value="wk">weeks</option>
+                    <option value="day">days</option>
+                  </select>
+            </div>
+        </div>
+        <span id = "spanUnit" class="red"></span>
+	  <span id="helpBlock" class="help-block">Enter patient age</span>
+	</div>
+</div>
+<div class="form-group">
+	<div class="col-sm-12">
+	  <p class="form-control-static">or</p>
+	</div>
+</div>
+<div class="form-group">
+	<label for="" class="col-sm-2 control-label">Date of Birth:</label>
+	<div class="col-sm-10">
+		{% include "atoms-dob-field" %}
+	  <span id="helpBlock" class="help-block">Enter patient date of birth</span>
+	</div>
+</div>
+</fieldset>
