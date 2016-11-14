@@ -169,16 +169,8 @@
   }
 
 /*forms*/
- input, textarea {
- 	width: 100%;
- 	height: 30px;
- 	border: 1px solid;
- 	padding: 5px;
- }
- /* this is not needed: can use bootstrap vaidation classes: http://getbootstrap.com/css/#forms-control-validation */
- .alert {
-  	border: 1px solid #ff0303;
- }
+ /* this is not needed: can use bootstrap classes: http://getbootstrap.com/css/#forms-control-validation */
+
 
  /*list-menu : todo: Rocio to update based on design*/
  .list-menu>li {
