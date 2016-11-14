@@ -172,7 +172,8 @@
  /* removed classes not needed: can use bootstrap classes: http://getbootstrap.com/css/#forms-control-validation */
 fieldset {
    border: 1px solid #f2f2f2 !important;
-   padding-top: 10px !important;
+   padding: 10px !important;
+   margin-bottom: 15px !important;
 }
 
  /*list-menu : todo: Rocio to update based on design*/
