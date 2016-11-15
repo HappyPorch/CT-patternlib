@@ -14,3 +14,9 @@ $('.info-box-toggle').click(function(){
 				  .toggleClass('hide-info');
 	$('.info-box-toggle').toggleClass('active');	
 })
+
+$('.info-box-toggle').click(function(){
+	$('.info-box-panel').toggleClass('show-info')
+				  .toggleClass('hide-info');
+	$('.info-box-toggle').toggleClass('active');	
+})

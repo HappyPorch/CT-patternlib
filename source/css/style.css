@@ -2,6 +2,24 @@
  * YOUR STYLES HERE
  */
 
+ /*
+1. General
+2. Helpers
+3. Text
+4. Icons
+5. Buttons
+6. Forms
+7. Navigation
+8. Tables
+9. Panels
+10. Info Box
+11. Tables
+12. Media Queries
+13. Navwizard
+
+ */
+
+/*General*/
  body {
  	font-size: 12px;
  	line-height: 1.5em;
@@ -15,7 +33,36 @@
  .no-padding {
   padding: 0;
  }
-/*text*/
+
+/*Helpers*/
+ .vertical-space {
+  padding: 1em;
+ }
+/*background colors*/
+  .bg-light-blue {
+    background-color: #cae3f2 !important;
+  }
+  .bg-light-yellow {
+    background-color: #ffffe0 !important;
+  }
+  .bg-green {
+    background-color: #08ff3c !important;
+  }
+  .bg-yellow {
+    background-color: #ffed0b !important;
+  }
+  .bg-red {
+    background-color: #ff0303 !important;
+  }
+  .bg-blue {
+    background-color: #031bf7 !important;
+  }
+/*border colors*/
+  .border-light-blue {
+    border-color: #cae3f2 !important;
+  }
+
+/*Text*/
  h1, h1 a {
  	font-size: 2em;
  	font-weight: bold;
@@ -88,7 +135,8 @@
      filter: alpha(opacity=25);
      opacity: 0.25;
  }
-/*icons*/
+
+/*Icons*/
 .fa-arrow-left,
 .fa-home,
 .fa-minus,
@@ -121,7 +169,8 @@
 .fa-paperclip {
   color: #333333;
 }
-/*buttons*/
+
+/*Buttons*/
  .btn {
  	  border-radius: 20px;
  }
@@ -143,17 +192,17 @@
     cursor: pointer;
   }
   .info-button .fa {
-    color: #ffffff;
+    color:  #00494f;
     margin: 5px;
-    background-color: #637586;
+    background-color: #ffffff;
     border-radius: 5px;
-    border: 2px solid;
+    border: 2px solid #00494f;
     padding: 4px 5px;
   }
   .info-button:hover .fa {
-    background-color: #ffffff;
-    border: 2px solid #00494f;
-    color: #00494f;
+    background-color: #637586;
+    border: 2px solid #637586;
+    color: #ffffff;
   }
   .info-box-toggle.active > .info-button .fa {
     color: #333333;
@@ -168,7 +217,7 @@
     margin-top: .4em;
   }
 
-/*forms*/
+/*Forms*/
  /* removed classes not needed: can use bootstrap classes: http://getbootstrap.com/css/#forms-control-validation */
 fieldset {
    border: 1px solid #f2f2f2 !important;
@@ -183,13 +232,7 @@ fieldset {
   font-style: italic;
 }
 
- /*list-menu : todo: Rocio to update based on design*/
- .breadcrumb {
-  background: none;
-  margin-bottom: 0px;
-  padding: 8px 5px;
- }
-
+/*Navigation*/
 /*navbar*/
 .navbar {
   border-radius: none;
@@ -252,132 +295,12 @@ li a.menu-button {
 .navbar-right li {
   border-left: 2px solid #cae3f2;
 }
-
-/*tables*/
- tr.unread {
-  	background-color: #ffffe0 !important;
-  	font-weight: bold;
+/*list-menu : todo: Rocio to update based on design*/
+ .breadcrumb {
+  background: none;
+  margin-bottom: 0px;
+  padding: 8px 5px;
  }
- th h5 {
-  display: block;
- }
- .table-sorter {
-  float: right;
-  margin-left: 5px;
- }
- .summary-table td {
-  padding: 5px;
- }
- .summary-table .data-title {
-  text-align: right;
-  font-weight: bold;
- }
- .tfoot {
-  background-color: #f2f2f2;
- }
- .table.table-striped>thead>tr>th {
-  vertical-align: baseline;
- }
- .table-striped th a {
-  display: flex;
- }
- .table-striped th a:hover {
-  text-decoration: none;
- }
- .asc-desc {
-  margin-right: 3px;
- }
- /* from https://scotch.io/bar-talk/different-tricks-on-how-to-make-bootstrap-columns-all-the-same-height */
- .row.match-my-cols {
-    overflow: hidden;
-}
-.row.match-my-cols [class*="col-"]{
-    margin-bottom: -99999px;
-    padding-bottom: 99999px;
-}
-
-/* assumes not responsive row */
-.is-table-row {
-    display: table;
-}
-.is-table-row [class*="col-"] {
-    float: none;
-    display: table-cell;
-    vertical-align: top;
-}
-
-/*summary panel*/
-div.summary-list {
-  padding: 5px;
-}
-div.summary-list dl {
-   margin-bottom: 0;
-}
-
-/*message-panel*/
-.message-panel .row {
-   border: 1px solid #ccc;
-   margin-left: 0; margin-right: 0;
-}
-.message-panel .row.panel-head {
-   border-bottom: 0;
-   font-size: 0.8em
-}
-.message-panel [class*="col-"] {
-   padding-top:  8px;
-   padding-bottom:  8px;
-}
-
-.message-panel .row.panel-head span {
-   float: right;
-   color: #ccc;
-}
- /*info box*/
- .info-box {
- 	border: 2px solid #cae3f2;
- 	border-radius: 5px;
- 	position: relative;
-  margin-top: 35px;
- }
- .show-info {
-  display: block;
- }
- .hide-info {
-  display: none;
- }
- .info-box-toggle {
-  float: right;
- }
- .info-box-toggle > .info-button > i {
-  margin: 0;
- }
- /*tables*/
- .date-cell {
-  white-space: nowrap;
- }
- .date-cell sup {
-  top: -1em;
-  color: #b3b3b3  ;
- }
- .check-patient {
-  display: inline-block;
-  width: 10px;
-  text-align: center;
- }
- th h5 {
-  display: inline;
- }
- tr > td {
-  padding-left: 20px !important;
- }
- .table-footer {
-  text-align: right;
- }
- /*helpers*/
- .vertical-space {
-  padding: 1em;
- }
-
  /*footer menu*/
 .footer-nav {
   border-top: 2px solid #cae3f2;
@@ -432,29 +355,140 @@ div.summary-list dl {
     text-transform: uppercase;
   }
 
-  /*background colors*/
+/*Tables*/
+ tr.unread {
+  	background-color: #ffffe0 !important;
+  	font-weight: bold;
+ }
+ th h5 {
+  display: block;
+ }
+ .table-sorter {
+  float: right;
+  margin-left: 5px;
+ }
+ .summary-table td {
+  padding: 5px;
+ }
+ .summary-table .data-title {
+  text-align: right;
+  font-weight: bold;
+ }
+ .tfoot {
+  background-color: #f2f2f2;
+ }
+ .table.table-striped>thead>tr>th {
+  vertical-align: baseline;
+ }
+ .table-striped th a {
+  display: flex;
+ }
+ .table-striped th a:hover {
+  text-decoration: none;
+ }
+ .asc-desc {
+  margin-right: 3px;
+ }
+ .table-panel {
+  overflow: scroll; ;
+ }
+ .date-cell {
+  white-space: nowrap !important;
+ }
+ .date-cell sup {
+  top: -1em !important;
+  color: #b3b3b3;
+ }
+ .check-patient {
+  display: inline-block;
+  width: 10px;
+  text-align: center;
+ }
+ th h5 {
+  display: inline;
+ }
+ tr > td {
+  padding-left: 20px !important;
+ }
+ .table-footer {
+  text-align: right;
+ }
+ a.read i {
+  color: #fec98a;
+ }
 
-  .bg-light-blue {
-    background-color: #cae3f2;
-  }
-  .bg-light-yellow {
-    background-color: #ffffe0;
-  }
-  .bg-green {
-    background-color: #08ff3c;
-  }
-  .bg-yellow {
-    background-color: #ffed0b;
-  }
-  .bg-red {
-    background-color: #ff0303;
-  }
-  .bg-blue {
-    background-color: #031bf7;
-  }
+ /*Panels*/
+ /* from https://scotch.io/bar-talk/different-tricks-on-how-to-make-bootstrap-columns-all-the-same-height */
+ .row.match-my-cols {
+    overflow: hidden;
+}
+.row.match-my-cols [class*="col-"]{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+/* assumes not responsive row */
+.is-table-row {
+    display: table;
+}
+.is-table-row [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
+/*summary panel*/
+div.summary-list {
+  padding: 5px;
+}
+div.summary-list dl {
+   margin-bottom: 0;
+}
+/*message-panel*/
+.message-panel .row {
+   border: 1px solid #ccc;
+   margin-left: 0; margin-right: 0;
+}
+.message-panel .row.panel-head {
+   border-bottom: 0;
+   font-size: 0.8em
+}
+.message-panel [class*="col-"] {
+   padding-top:  8px;
+   padding-bottom:  8px;
+}
+.message-panel .row.panel-head span {
+   float: right;
+   color: #ccc;
+}
+
+/*Info Box*/
+.info-box {
+ 	border: 2px solid #cae3f2;
+ 	border-radius: 5px;
+ 	position: relative;
+  margin-top: 35px;
+}
+.show-info {
+  display: block;
+}
+.hide-info {
+  display: none;
+}
+.info-box-toggle {
+  float: right;
+}
+.info-box-toggle > .info-button > i {
+  margin: 0;
+}
+.panel-heading span {
+  margin-top: -20px;
+  font-size: 15px;
+}
+.panel-heading i {
+  cursor: pointer;
+}
 
 
- /*media queries*/
+/*Media Queries*/
 @media only screen and (min-width: 768px) {
   ul.footer-menu-list {
       display: block !important;
