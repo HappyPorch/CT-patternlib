@@ -236,8 +236,23 @@ fieldset {
   color: #4d4d4d;
   font-style: italic;
 }
+<<<<<<< Updated upstream
 
 /*Navigation*/
+=======
+.select-group select {
+      display: inline;
+      width: 80px !important;
+      margin-right: 5px;
+  }
+ /*list-menu : todo: Rocio to update based on design*/
+ .breadcrumb {
+  background: none;
+  margin-bottom: 0px;
+  padding: 8px 5px;
+ }
+
+>>>>>>> Stashed changes
 /*navbar*/
 .navbar {
   border-radius: none;

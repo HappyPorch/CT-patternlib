@@ -1,0 +1,26 @@
+
+<div class="form-group">
+    <label class="col-sm-2 control-label">Start date:</label>
+    <div class="col-sm-10">
+        <div class="select-group">
+        <select name="lst_s_d" id="lst_s_d" class="form-control">
+          <option value="0">[Day]</option>
+            {% for i in 1..31 %}
+                <option value="{{ i }}">{{ i }}</option>
+            {% endfor %}
+          </select>
+        <select name="lst_s_m" id="lst_s_m" class="form-control">
+          <option value="0">[Month]</option>
+            {% for i in 1..12 %}
+                <option value="{{ i }}">{{ date('2016-' ~ i ~ '-01') |date('M') }}</option>
+            {% endfor %}
+        </select>
+        <select name="lst_s_y" id="lst_s_y" class="form-control">
+            <option value="0">[Year]</option>
+            <option value="2016" selected="selected">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+        </select>
+        </div>
+    </div>
+</div>
