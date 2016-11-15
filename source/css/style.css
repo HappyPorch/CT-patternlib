@@ -174,9 +174,14 @@
  .btn {
  	  border-radius: 20px;
  }
- .btn-primary {
+ .btn-dark-green {
  	  background-color: #00494f;
  	  color: #ffffff;
+ }
+ .btn-dark-green:hover {
+    color: #204d74;
+    background-color: #ffffff;
+    border-color: #204d74;
  }
  .btn-danger {
   	background-color: #ffffff;
