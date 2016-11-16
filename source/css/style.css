@@ -464,10 +464,10 @@ div.summary-list dl {
 }
 /*message-panel*/
 .message-panel .row {
-   border: 1px solid #ccc;
    margin-left: 0; margin-right: 0;
+   padding: 0;
 }
-.message-panel .row.panel-head {
+.message-panel .row.panel-heading {
    border-bottom: 0;
    font-size: 0.8em
 }
@@ -475,9 +475,14 @@ div.summary-list dl {
    padding-top:  8px;
    padding-bottom:  8px;
 }
-.message-panel .row.panel-head span {
+.message-panel .row.panel-heading span,
+.message-panel .panel-footer span{
    float: right;
    color: #ccc;
+   margin-top: 0; font-size: 1em;
+}
+.message-panel .panel-footer {
+   border-top: 0;
 }
 
 /*Info Box*/
