@@ -1,0 +1,20 @@
+
+<div class="panel panel-primary border-light-blue">
+	<div class="panel-heading bg-light-blue border-light-blue">
+		<a class="panel-title">Add new comment</a>
+	</div>
+	<div class="panel-body">
+		<form name="frmPost" action="#" method="post" class="form-horizontal">
+
+		<div class="form-group">
+			<label for="..." class="col-sm-2 control-label">Test:</label>
+			<div class="col-sm-10">
+			  {% include "atoms-text-area" %}
+				<span id="helpBlock" class="help-block">help text here</span>
+			</div>
+		</div>
+		<input type="submit" value="Cancel" name="cancel" class="btn btn-default">
+		<input type="submit" value="Submit" name="submit" class="btn btn-primary pull-right">
+		</form>
+	</div>
+</div>
