@@ -675,3 +675,24 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:focus {
   color: #999999;
   background: #ededed;
 }
+
+/* modal */
+.modal-body {
+   padding: 0;
+}
+.modal-footer-sm {
+   border: 0;
+   padding: 2px;
+}
+.modal iframe {
+   height: 100%;
+    width: 100%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+}
