@@ -1,4 +1,15 @@
 $(document).ready(function(){
+
+//browser popup
+$("*[data-browserpop='yes']").on("click", function(e) {
+  e.preventDefault();
+	var height = $(this).attr('data-popheight') ? $(this).attr('data-popheight') : "360";
+	var width = $(this).attr('data-popwidth') ? $(this).attr('data-popwidth') : "480";
+	window.open($(this).attr('href'), "CT-browserpop", "width="+width+",height="+height+",resizable=yes,toolbar=no,menubar=no,location=no,status=no");
+	return false;
+});
+
+
 //modal
 $("*[data-modalpop='yes']").on("click", function(e) {
   e.preventDefault();
