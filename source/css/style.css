@@ -438,6 +438,12 @@ li a.menu-button {
  }
 
  /*Panels*/
+
+.panel-heading .dl-horizontal.dl-left,
+.panel-summary .dl-horizontal {
+   margin-bottom: 0px;
+}
+
  /* from https://scotch.io/bar-talk/different-tricks-on-how-to-make-bootstrap-columns-all-the-same-height */
  .row.match-my-cols {
     overflow: hidden;
