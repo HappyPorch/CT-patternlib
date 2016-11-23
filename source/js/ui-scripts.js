@@ -49,3 +49,11 @@ $('.info-box-toggle').click(function(){
 function closeModal() {
 	$('#modalPopup').modal('hide');
 }
+function showError(divId, msg) {
+	$('#'+divId).html(msg);
+	$('#'+divId).show();
+}
+function hideError(divId) {
+	$('#'+divId).html("msg");
+	$('#'+divId).hide();
+}

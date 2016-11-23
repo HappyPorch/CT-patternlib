@@ -57,6 +57,11 @@
   .bg-blue {
     background-color: #031bf7 !important;
   }
+
+  .bg-light-blue .table-striped {
+    background-color: #fff;
+  }
+
 /*border colors*/
   .border-light-blue {
     border-color: #cae3f2 !important;
@@ -134,6 +139,9 @@
      -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
      filter: alpha(opacity=25);
      opacity: 0.25;
+ }
+ .text-red {
+   color: #ff0303;
  }
 
 /*Icons*/
