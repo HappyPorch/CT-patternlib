@@ -384,6 +384,9 @@ li a.menu-button {
   }
 
 /*Tables*/
+ .table-container {
+   overflow: scroll;
+ }
  tr.unread {
   	background-color: #ffffe0 !important;
   	font-weight: bold;
