@@ -57,3 +57,9 @@ function hideError(divId) {
 	$('#'+divId).html("msg");
 	$('#'+divId).hide();
 }
+function showLoader() {
+	$("*[data-loader='y']").show();
+}
+function hideLoader() {
+	$("*[data-loader='y']").hide();
+}
