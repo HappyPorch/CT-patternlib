@@ -244,7 +244,7 @@ fieldset {
   color: #4d4d4d;
   font-style: italic;
 }
-<<<<<<< Updated upstream
+
 
 /*Navigation*/
 =======
@@ -260,7 +260,6 @@ fieldset {
   padding: 8px 5px;
  }
 
->>>>>>> Stashed changes
 /*navbar*/
 .navbar {
   border-radius: none;
@@ -306,7 +305,7 @@ fieldset {
   margin-left: 5px;
 }
 li a.menu-button {
-  padding: 10px 20px;
+  padding: 10px 10px;
 }
 .menu-button:hover > i {
   color: #00494f;
