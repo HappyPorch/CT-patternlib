@@ -520,6 +520,12 @@ div.summary-list dl {
 .info-box-toggle > .info-button > i {
   margin: 0;
 }
+.info-box-lower-toggle {
+    margin-top: -20px;
+    margin-left: 12px;
+    font-size: 0.8em;
+    cursor: pointer;
+}
 .panel-heading span {
   margin-top: -20px;
   font-size: 15px;

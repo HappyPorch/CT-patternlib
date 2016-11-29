@@ -36,6 +36,13 @@ $('.info-box-toggle').click(function(){
 	$(this).next().toggleClass('show-info')
 				  .toggleClass('hide-info');
 	$(this).toggleClass('active');
+	$(this).next().next().toggle();
+});
+$('.info-box-lower-toggle').click(function(){
+	$(this).toggle();
+	$(this).prev().toggleClass('show-info')
+				  .toggleClass('hide-info');
+	$(this).prev().prev().toggleClass('active');
 });
 
 
