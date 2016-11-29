@@ -33,16 +33,11 @@ $('.footer-menu-btn').click(function(){
 });
 
 $('.info-box-toggle').click(function(){
-	$('.info-box').toggleClass('show-info')
+	$(this).next().toggleClass('show-info')
 				  .toggleClass('hide-info');
-	$('.info-box-toggle').toggleClass('active');
+	$(this).toggleClass('active');
 });
 
-$('.info-box-toggle').click(function(){
-	$('.info-box-panel').toggleClass('show-info')
-				  .toggleClass('hide-info');
-	$('.info-box-toggle').toggleClass('active');
-});
 
 });
 
