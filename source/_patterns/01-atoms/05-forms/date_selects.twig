@@ -9,13 +9,13 @@
                 <option value="{{ i }}">{{ i }}</option>
             {% endfor %}
           </select>
-        <select name="lst_s_m" id="lst_s_m" class="form-control">
+        <select name="lst_s_m" id="lst_s_m" class="form-control" data-daysinput="lst_s_d" data-yearsinput="lst_s_y" data-monthsinput="lst_s_m">
           <option value="0">[Month]</option>
             {% for i in 1..12 %}
                 <option value="{{ i }}">{{ date('2016-' ~ i ~ '-01') |date('M') }}</option>
             {% endfor %}
         </select>
-        <select name="lst_s_y" id="lst_s_y" class="form-control">
+        <select name="lst_s_y" id="lst_s_y" class="form-control" data-daysinput="lst_s_d" data-yearsinput="lst_s_y" data-monthsinput="lst_s_m">
             <option value="0">[Year]</option>
             <option value="2016" selected="selected">2016</option>
             <option value="2017">2017</option>

@@ -20,6 +20,20 @@ $("*[data-modalpop='yes']").on("click", function(e) {
   return false;
 });
 
+//disable invalid days in month when we are using 3 selects (d/m/y)
+$("*[data-daysinput]").on("change", function() {
+	var daySelect = $("#"+$(this).data("daysinput"));
+	var month = $("#"+$(this).data("monthsinput")).val();
+	var year = $("#"+$(this).data("yearsinput")).val();
+	var day = daySelect.val();
+	var daysInSelectedMonth = daysInMonth(month, year);
+	if (day>daysInSelectedMonth)
+		daySelect.val(0);
+	daySelect.children("option").prop("disabled", false);
+	daySelect.children("option").filter(function() {
+			return this.value > daysInSelectedMonth;
+	}).prop("disabled", true);
+});
 
 // Toggle menu buttons
 $('.header-menu-toggle').click(function(){
@@ -64,4 +78,8 @@ function showLoader() {
 }
 function hideLoader() {
 	$("*[data-loader='y']").hide();
+}
+
+function daysInMonth(month,year) {
+    return new Date(year, month, 0).getDate();
 }
