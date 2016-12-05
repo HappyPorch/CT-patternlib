@@ -521,8 +521,8 @@ div.summary-list dl {
   margin: 0;
 }
 .info-box-lower-toggle {
-    margin-top: -20px;
-    margin-left: 12px;
+    margin-bottom: -12px;
+    margin-left: -10px;
     font-size: 0.8em;
     cursor: pointer;
 }
