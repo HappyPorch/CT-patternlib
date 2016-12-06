@@ -1,1 +1,5 @@
-{% include "atoms-info-box" with {styleModifier: "bg-light-blue"} %}
+{% set _extra = block('extra') %}
+
+{% embed "atoms-info-box" with {styleModifier: "bg-light-blue"} %}
+	{% block extra %}{{ _extra|raw }}{% endblock %}
+{% endembed %}
