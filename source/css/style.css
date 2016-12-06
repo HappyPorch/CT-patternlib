@@ -20,6 +20,9 @@
  */
 
 /*General*/
+html {
+    overflow: -moz-scrollbars-vertical;
+}
  body {
  	font-size: 12px;
  	line-height: 1.5em;
