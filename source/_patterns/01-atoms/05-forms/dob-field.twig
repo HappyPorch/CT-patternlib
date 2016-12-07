@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col-xs-12 col-md-4 col-lg-4">
     <div class="input-group">
-      <input type="number" class="form-control" placeholder="date" maxlength="2" size="3"/>
+      <input type="number" min="1" max="31" class="form-control" placeholder="date" maxlength="2" size="3"/>
       <span class="input-group-addon">/</span>
-      <input type="number" class="form-control" placeholder="month" maxlength="2" size="3"/>
+      <input type="number" min="1" max="12" class="form-control" placeholder="month" maxlength="2" size="3"/>
       <span class="input-group-addon">/</span>
-      <input type="number" class="form-control" placeholder="year" maxlength="4" size="5" />
+      <input type="number" min="1900" max="{{ "now"|date("Y") }}" class="form-control" placeholder="year" maxlength="4" size="5" />
     </div>
   </div>
 </div>
