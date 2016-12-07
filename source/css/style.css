@@ -19,6 +19,7 @@
 
  */
 
+
 /*General*/
 html {
     overflow: -moz-scrollbars-vertical;
@@ -509,6 +510,9 @@ div.summary-list dl {
  	border: 2px solid #cae3f2;
  	border-radius: 5px;
  	position: relative;
+  margin-top: 20px;
+}
+.page-info .info-box {
   margin-top: 35px;
 }
 .show-info {
@@ -723,7 +727,20 @@ ul.nav-wizard.nav-wizard-backnav .active ~ li a:focus {
     right: 0;
     background-color: #fff;
 }
-
+/* fix for modal scrolling issue on iOS */
+body.modal-open {
+  position: fixed;
+  overflow: hidden;
+}
+body.modal-open .modal {
+  overflow: scroll;
+}
+@media only screen and (min-resolution: 150dpi) and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  body.modal-open .modal {
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
 /*loader*/
 .loading-message {
    position: absolute;
