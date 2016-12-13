@@ -227,6 +227,9 @@ html {
     border: 2px solid #637586;
     color: #ffffff;
   }
+  .info-box-toggle {
+	margin-bottom: 10px;
+	}
   .info-box-toggle.active > .info-button .fa {
     color: #333333;
     background-color: #cae3f2;
