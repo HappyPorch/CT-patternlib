@@ -49,6 +49,12 @@ html {
   .bg-light-yellow {
     background-color: #ffffe0 !important;
   }
+  .bg-green-blue {
+    background-color: #cfe4e5 !important;
+  }
+  .bg-gray-blue {
+    background-color: #637586 !important;
+  }
   .bg-green {
     background-color: #08ff3c !important;
   }
@@ -489,7 +495,10 @@ div.summary-list dl {
 }
 .message-panel .row.panel-heading {
    border-bottom: 0;
-   font-size: 0.8em
+   font-size: 0.8em;
+}
+.message-panel .bg-gray-blue {
+   color: #fff;
 }
 .message-panel [class*="col-"] {
    padding-top:  8px;
@@ -504,7 +513,6 @@ div.summary-list dl {
 .message-panel .panel-footer {
    border-top: 0;
 }
-
 /*Info Box*/
 .info-box {
  	border: 2px solid #cae3f2;
