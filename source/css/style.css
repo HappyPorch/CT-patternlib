@@ -458,7 +458,7 @@ li a.menu-button {
  }
 
  /*Panels*/
-
+.panel {margin-bottom: 10px;}
 .panel-heading .dl-horizontal.dl-left,
 .panel-summary .dl-horizontal {
    margin-bottom: 0px;
