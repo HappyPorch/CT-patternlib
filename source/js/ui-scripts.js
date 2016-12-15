@@ -81,3 +81,22 @@ function hideLoader() {
 function daysInMonth(month,year) {
     return new Date(year, month, 0).getDate();
 }
+
+function showErrorAlert(container, text) {
+ container.html(text);
+ container.attr('class','');
+ container.addClass("alert alert-danger");
+ container.show();
+}
+function showInfoAlert(container, text) {
+ container.html(text);
+ container.attr('class','');
+ container.addClass("alert alert-info");
+ container.show();
+}
+function showSuccessAlert(container, text) {
+ container.html(text);
+ container.attr('class','');
+ container.addClass("alert alert-success");
+ container.show();
+}
