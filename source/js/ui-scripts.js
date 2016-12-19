@@ -39,6 +39,7 @@ $("*[data-daysinput]").on("change", function() {
 $('.header-menu-toggle').click(function(){
     $(this).toggleClass("fa-bars")
            .toggleClass("fa-times");
+		$("#header-welcome").toggle();
 });
 
 $('.footer-menu-btn').click(function(){
