@@ -340,7 +340,7 @@ li a.menu-button {
 }
 header h3::before, header h3::after {
 	content: "\25a0";
-	margin: 0 5px;
+	margin: 0 2px;white-space: nowrap;
 }
 @media only screen and (min-width: 768px) {
 	header h3 {

@@ -1,3 +1,13 @@
+// add string.Format
+if (!String.prototype.format) {
+  String.prototype.format = function() {
+    var args = arguments;
+    return this.replace(/{(\d+)}/g, function(match, number) {
+      return typeof args[number] != 'undefined' ? args[number] : match;
+    });
+  };
+}
+
 $(document).ready(function(){
 
 //browser popup
@@ -84,20 +94,25 @@ function daysInMonth(month,year) {
 }
 
 function showErrorAlert(container, text) {
+ resetAlert(container);
  container.html(text);
- container.attr('class','');
  container.addClass("alert alert-danger");
  container.show();
 }
 function showInfoAlert(container, text) {
+ resetAlert(container);
  container.html(text);
- container.attr('class','');
  container.addClass("alert alert-info");
  container.show();
 }
 function showSuccessAlert(container, text) {
+ resetAlert(container);
  container.html(text);
- container.attr('class','');
  container.addClass("alert alert-success");
  container.show();
+}
+function resetAlert(container) {
+ container.html("text");
+ container.attr('class','');
+ container.hide();
 }
