@@ -431,8 +431,23 @@ header h3::before, header h3::after {
    overflow: scroll;
  }
  tr.unread {
-  	background-color: #ffffe0 !important;
+  	--background-color: #ffffe0 !important;
   	font-weight: bold;
+	--border-left: 4px solid #ff9c00 !important;
+ }
+ tr.unread td:first-child {
+ }
+ tr.read td {
+ }
+ td.read-status-cell a {
+	padding-right: 4px;
+	text-decoration: none;
+ }
+ tr.read td.read-status-cell a {
+  color: #e6e6e6 !important;
+ }
+ tr.read td.read-status-cell a:hover {
+  color: #b3b3b3 !important;
  }
  th h5 {
   display: block;
@@ -466,7 +481,7 @@ header h3::before, header h3::after {
  .table-panel {
   overflow: scroll; ;
  }
- .date-cell {
+ .date-cell, .nowrap-cell {
   white-space: nowrap !important;
  }
  .date-cell sup {
@@ -486,9 +501,6 @@ header h3::before, header h3::after {
  }
  .table-footer {
   text-align: right;
- }
- a.read i {
-  color: #fec98a;
  }
 
  /*Panels*/

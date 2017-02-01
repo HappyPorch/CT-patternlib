@@ -3,6 +3,7 @@
 <table class="table table-striped">
 	<thead>
 		<tr>
+			<th></th>
 		<th>
 			<a>
 				<div class="asc-desc">{% include "atoms-sort-icon" %}</div>
@@ -68,10 +69,15 @@
 </thead>
 <tfoot style="background-color: #f2f2f2;">
 	<tr>
-		<td colspan="10">{% include "atoms-table-footer" %}</td>
+		<td colspan="11">{% include "atoms-table-footer" %}</td>
 	</tr>
 </tfoot>
-<tr>
+<tr class="read">
+	<td class="read-status-cell nowrap-cell">
+        <a href="#" title="Click to do something" >
+          <i class="fa fa-envelope-open fa-lg" aria-hidden="true"></i>
+        </a>
+    </td>
 	<td><i class="fa fa-square status-red" aria-hidden="true"></i></td>
 	<td>160</td>
 	<td>P</td>
@@ -91,7 +97,12 @@
 	<td>21</td>
 	<td><a class="link">Mr Donald Duck</a></td>
 </tr>
-<tr>
+<tr class="read">
+	<td class="read-status-cell nowrap-cell">
+        <a href="#" title="Click to do something" >
+          <i class="fa fa-envelope-open fa-lg" aria-hidden="true"></i>
+        </a>
+    </td>
 	<td><i class="fa fa-square status-green" aria-hidden="true"></i></td>
 	<td>160</td>
 	<td>P</td>
@@ -111,7 +122,12 @@
 	<td>21</td>
 	<td><a class="link">Mr Donald Duck</a></td>
 </tr>
-<tr>
+<tr class="read">
+	<td class="read-status-cell nowrap-cell">
+        <a href="#" title="Click to do something" >
+          <i class="fa fa-envelope-open fa-lg" aria-hidden="true"></i>
+        </a>
+    </td>
 	<td><i class="fa fa-square status-yellow" aria-hidden="true"></i></td>
 	<td>160</td>
 	<td>P</td>
@@ -132,6 +148,12 @@
 	<td><a class="link">Mr Donald Duck</a></td>
 </tr>
 <tr class="unread">
+	<td class="read-status-cell nowrap-cell">
+        <a href="#" title="Click to do something" >
+          <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+          <i class="fa fa-exclamation fa-lg" aria-hidden="true"></i>
+        </a>
+    </td>
 	<td><i class="fa fa-square status-none" aria-hidden="true"></i></td>
 	<td>160</td>
 	<td>P</td>
