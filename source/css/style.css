@@ -135,6 +135,9 @@ html {
  .dropdown-menu>li:hover {
   background-color: #cae3f2 !important;
  }
+.dropdown-menu>li>a {
+  padding: 3px 7px;
+ }
  .dropdown-menu>li>a:focus,
  .dropdown-menu>li>a:hover {
   background: none;
