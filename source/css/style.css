@@ -157,6 +157,11 @@ html {
    color: #ff0303;
  }
 
+ .small-note {
+  font-style: italic;
+  color: #4d4d4d;
+ }
+
 /*Icons*/
 .fa-arrow-left,
 .fa-home,
