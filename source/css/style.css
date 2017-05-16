@@ -158,6 +158,8 @@ html {
  }
 
  .small-note {
+  font-weight: normal;
+  font-size: 9px;
   font-style: italic;
   color: #4d4d4d;
  }
