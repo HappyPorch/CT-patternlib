@@ -270,6 +270,7 @@ fieldset {
 .form-control-narrow {
 	max-width: 120px;
 }
+.form-group .radio label:not(:first-of-type) { margin-left: 2em;}
 
 /*Navigation*/
 =======
