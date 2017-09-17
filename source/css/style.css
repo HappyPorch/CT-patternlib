@@ -272,6 +272,12 @@ fieldset {
 }
 .form-group .radio label:not(:first-of-type) { margin-left: 2em;}
 
+.reduce-space{
+	margin-bottom:0px;
+	margin-top:0px;
+	line-height:80%;
+}
+
 /*Navigation*/
 =======
 .select-group select {
