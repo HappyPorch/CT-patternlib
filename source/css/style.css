@@ -153,8 +153,11 @@ html {
      filter: alpha(opacity=25);
      opacity: 0.25;
  }
- .text-red, .red {
+ .text-red, .red,  .text-fail {
    color: #ff0303;
+ }
+ .text-success {
+   color: #00494f;
  }
 
  .small-note {
