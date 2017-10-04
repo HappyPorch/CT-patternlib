@@ -449,6 +449,9 @@ header h3::before, header h3::after {
  .table-container {
    overflow: scroll;
  }
+ .table-nonfluid {
+   width: auto !important;
+}
  tr.unread {
   	--background-color: #ffffe0 !important;
   	font-weight: bold;
