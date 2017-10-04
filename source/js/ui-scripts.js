@@ -116,3 +116,17 @@ function resetAlert(container) {
  container.attr('class','');
  container.hide();
 }
+
+//toggleCheckbox = checkbox when click on table row
+$.fn.toggleCheckbox = function() {
+	this.prop('checked', !this.prop('checked'));
+}
+$(function ()
+{
+	$('.toggleCheckbox tr').click(function() {
+			$(this).find('td input:checkbox').toggleCheckbox();
+	})
+	$('.toggleCheckbox tr td input:checkbox').click(function(event) {
+			event.stopPropagation();
+	})
+});
