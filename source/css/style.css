@@ -88,10 +88,6 @@ html {
  	font-weight: bold;
  	color: #00494f;
  }
- h2::before {
- 	content: '\003e''\003e''\00a0';
- 	color: #00494f;
- }
  h3, h3 a {
  	font-size: 1.3em;
  	color: #000000;
