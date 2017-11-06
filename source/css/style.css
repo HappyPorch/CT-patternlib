@@ -72,6 +72,16 @@ html {
     background-color: #fff;
   }
 
+  .table-striped-double>tbody>tr:nth-of-type(odd) {
+    background-color: #fff;
+   }
+   .table-striped-double>tbody>tr:nth-of-type(4n), .table-striped-double>tbody>tr:nth-of-type(4n-1) {
+    background-color: #f9f9f9;
+   }
+   .table-striped-double>tbody>tr:nth-of-type(4n) td, .table-striped-double>tbody>tr:nth-of-type(4n+2) td {
+     border-top : none;
+   }
+
 /*border colors*/
   .border-light-blue {
     border-color: #cae3f2 !important;
