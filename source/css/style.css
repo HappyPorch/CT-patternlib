@@ -284,7 +284,6 @@ max-width: 120px;
 .reduce-space{
 margin-bottom:0px;
 margin-top:0px;
-line-height:80%;
 }
 
 /*Navigation*/
@@ -586,6 +585,9 @@ div.summary-list dl {
  float: right;
  color: #ccc;
  margin-top: 0; font-size: 1em;
+}
+.message-panel  dl {
+  margin-bottom: 0;
 }
 .message-panel .panel-footer {
  border-top: 0;
