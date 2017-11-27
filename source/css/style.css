@@ -198,6 +198,9 @@ color: #ff0303;
 .status-none {
 color: #cccccc;
 }
+.status-invisible {
+  color: transparent;
+}
 .fa-check,
 .fa-exclamation {
 color: #ff9c00;
