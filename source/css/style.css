@@ -173,6 +173,11 @@ font-style: italic;
 color: #4d4d4d;
 }
 
+.dl-horizontal dt {
+  overflow: visible;
+  white-space: wrap;
+}
+
 /*Icons*/
 .fa-arrow-left,
 .fa-home,
