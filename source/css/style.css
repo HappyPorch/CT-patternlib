@@ -175,7 +175,7 @@ color: #4d4d4d;
 
 .dl-horizontal dt {
   overflow: visible;
-  white-space: wrap;
+  white-space: normal; 
 }
 
 /*Icons*/
@@ -384,7 +384,7 @@ header h3 {
   font-weight: normal;
   text-align: center;
   float: right;
-  margin-top: -85px;
+  margin-top: -25px;
   max-width: 250px;
   margin-right: 20px;
 }
@@ -670,6 +670,9 @@ ul.footer-menu-list li {
 }
 .dl-horizontal.dl-left dd {
   margin-left: 120px;
+}
+.header-container {
+  min-height: 75px;
 }
 }
 
