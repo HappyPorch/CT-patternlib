@@ -1,0 +1,59 @@
+<form class="form-horizontal">
+
+
+<div class="form- grouphas-error">
+	<label for="inputEmail3" class="col-sm-2 control-label">Test:</label>
+	<div class="col-sm-10">
+	  {% include "atoms-text-field" %}
+		<span id="helpBlock" class="help-block">help text here</span>
+	</div>
+</div>
+
+<div class="form- grouphas-error">
+	<label for="inputEmail3" class="col-sm-2 control-label">Test:</label>
+	<div class="col-sm-10">
+	  {% include "atoms-text-area" %}
+		<span id="helpBlock" class="help-block">help text here</span>
+	</div>
+</div>
+
+<div class="form-group has-error">
+	<label class="col-sm-2 control-label">Checkboxes:</label>
+	<div class="col-sm-10">
+	  {% include "atoms-checkbox" %}
+	  {% include "atoms-checkbox" %}
+	  {% include "atoms-checkbox" %}
+	  {% include "atoms-checkbox" %}
+		<span id="helpBlock" class="help-block">help text goes here</span>
+	</div>
+</div>
+
+<div class="form-group has-error">
+	<label class="col-sm-2 control-label">Radio:</label>
+	<div class="col-sm-10">
+	  {% include "atoms-radio" %}
+	  {% include "atoms-radio" %}
+	  {% include "atoms-radio" %}
+		<span id="helpBlock" class="help-block">help text goes here</span>
+	</div>
+</div>
+
+
+<div class="form-group has-error">
+	<label class="col-sm-2 control-label">Select:</label>
+	<div class="col-sm-10">
+	  {% include "atoms-select" %}
+		<span id="helpBlock" class="help-block">help text goes here</span>
+	</div>
+</div>
+
+
+<div class="form-group has-error">
+	<label class="col-sm-2 control-label">DoB:</label>
+	<div class="col-sm-10">
+	  {% include "atoms-dob-field" %}
+		<span id="helpBlock" class="help-block">help text goes here</span>
+	</div>
+</div>
+
+</form>
