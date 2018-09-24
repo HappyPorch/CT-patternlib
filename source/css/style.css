@@ -23,7 +23,6 @@
 /*General*/
 html {
   overflow: -moz-scrollbars-vertical;
-  word-wrap: break-word;
 }
 body {
  font-size: 12px;
@@ -32,12 +31,16 @@ color: #4d4d4d;
 padding: 0;
 margin: 0;
 }
+dd, h1, .wrap-break-all {
+  word-break: break-all;
+}
 .no-margin {
 margin: 0;
 }
 .no-padding {
 padding: 0;
 }
+
 
 /*Helpers*/
 .vertical-space {
