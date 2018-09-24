@@ -451,6 +451,7 @@ ul.footer-menu-list li {
 }
 .header-container .main-logo {
   float: left;
+  padding: 3px 0 0 3px;
 }
 
 /*header*/
@@ -854,6 +855,7 @@ body.modal-open .modal {
   text-align: center;
   width: 180px;
   transform: translate(-50%,-50%);
+  word-wrap: initial;
 }
 /* Absolute Center Spinner */
 .loading {
@@ -867,6 +869,7 @@ top: 0;
 left: 0;
 bottom: 0;
 right: 0;
+word-wrap: initial;
 }
 
 /* Transparent Overlay */
