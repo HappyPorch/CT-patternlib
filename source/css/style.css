@@ -23,6 +23,7 @@
 /*General*/
 html {
   overflow: -moz-scrollbars-vertical;
+  word-wrap: break-word;
 }
 body {
  font-size: 12px;
