@@ -288,6 +288,9 @@ border-radius: 5px;
 color: #4d4d4d;
 font-style: italic;
 }
+label .help-block {
+  display: inline;
+}
 .form-control-narrow {
 max-width: 120px;
 }
@@ -816,8 +819,11 @@ background: #ededed;
 
 /* modal */
 .modal-body {
- padding: 0;
-}
+  padding: 0;
+ }
+ .modal-body #modal-message {
+  padding: 8px;
+ }
 .modal-footer-sm {
  border: 0;
  padding: 2px;
