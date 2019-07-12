@@ -170,10 +170,15 @@ color: #e6e6e6;
  color: #00494f;
 }
 
-.small-note {
+.small-note  {
 font-weight: normal;
 font-size: 9px;
 font-style: italic;
+color: #4d4d4d;
+}
+.popover-content {
+font-weight: normal;
+font-size: 10px;
 color: #4d4d4d;
 }
 
