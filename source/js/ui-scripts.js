@@ -26,6 +26,9 @@ if (!String.prototype.format) {
 	showCTModal($(this).attr('data-poptitle'), $(this).attr('href'), null, $(this).attr('data-popinnerheight'), true);
 	return false;
   });
+
+  //popover
+  $('*[data-toggle="popover"]').popover();
   
   //disable invalid days in month when we are using 3 selects (d/m/y)
   $("*[data-daysinput]").on("change", function() {
@@ -99,7 +102,9 @@ if (!String.prototype.format) {
 		return false;
   }
 
-  function postToIframe(data,url,target){
+	function postToIframe(data,url,target){ 
+		$('[name='+target+']').contents().find("body").html("");
+		$('#postToIframe').remove();
     $('body').append('<form action="'+url+'" method="post" target="'+target+'" id="postToIframe"></form>');
     $.each(data,function(n,v){
         $('#postToIframe').append('<input type="hidden" name="'+n+'" value="'+v+'" />');
@@ -172,12 +177,14 @@ if (!String.prototype.format) {
   
 	  $('.blink').each(function() {
 		  var elem = $(this);
-		  setInterval(function() {
-			  if (elem.css('visibility') == 'hidden') {
-				  elem.css('visibility', 'visible');
-			  } else {
-				  elem.css('visibility', 'hidden');
-			  }
-		  }, 500);
+		  fadeInAndOut(elem);
 	  });
+
+	function fadeInAndOut(element) {
+		element.fadeTo( "slow" , 0.25, function() {
+			element.fadeTo( "slow" , 1.0, function() {
+				fadeInAndOut(element)
+			  });
+		});
+	}
 	  
