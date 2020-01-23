@@ -570,6 +570,9 @@ text-align: right;
   padding-top: 8px;
   border-top: #f2f2f2 solid 1px;
 }
+.border-light-blue>.panel-heading+.panel-collapse>.panel-body {
+  border-top: #cae3f2 solid 1px;
+}
 
 /* from https://scotch.io/bar-talk/different-tricks-on-how-to-make-bootstrap-columns-all-the-same-height */
 .row.match-my-cols {
