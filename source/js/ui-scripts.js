@@ -185,12 +185,16 @@ $(document).ready(function(){
 		//change + icon to -
 		var icon = $("*[data-ct-collaspe-icon='change']", $(this));
 		icon.addClass("fa-plus");
-		icon.removeClass("fa-minus")
+		icon.removeClass("fa-minus");
+		var btn = $("*[data-ct-collapse-showtext]", $(this));
+		btn.html(btn.attr("data-ct-collapse-showtext"));
 	})
 	$('.ct-collapse').on('shown.bs.collapse', function () {
 		//change + icon to -
-		var icon = $("*[data-ct-collaspe-icon='change']", $(this));
+		var icon = $("*[data-ct-collapse-icon='change']", $(this));
 		icon.addClass("fa-minus");
-		icon.removeClass("fa-plus")
+		icon.removeClass("fa-plus");
+		var btn = $("*[data-ct-collapse-hidetext]", $(this));
+		btn.html(btn.attr("data-ct-collapse-hidetext"));
 	})
 });
