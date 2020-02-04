@@ -1,3 +1,5 @@
+/** Dev note: this file must be updated via PatternLib repo **/
+
 // add string.Format
 if (!String.prototype.format) {
 	String.prototype.format = function() {
@@ -70,40 +72,94 @@ function hideLoader() {
 	$("*[data-loader='y']").hide();
 }
 
-function daysInMonth(month,year) {
-	return new Date(year, month, 0).getDate();
-}
+	function postToIframe(data,url,target){ 
+		$('[name='+target+']').contents().find("body").html("");
+		$('#postToIframe').remove();
+    $('body').append('<form action="'+url+'" method="post" target="'+target+'" id="postToIframe"></form>');
+    $.each(data,function(n,v){
+        $('#postToIframe').append('<input type="hidden" name="'+n+'" value="'+v+'" />');
+    });
+    $('#postToIframe').submit().remove();
+  }
+  
+  function closeModal(reload) {
+	  $('#modalPopup').modal('hide');
+	  if (reload) {
+		top.location.reload(true);
+	  }
+  }
+  function showError(divId, msg) {
+	  $('#'+divId).html(msg);
+	  $('#'+divId).show();
+  }
+  function hideError(divId) {
+	  $('#'+divId).html("msg");
+	  $('#'+divId).hide();
+  }
+  function showLoader() {
+	  $("*[data-loader='y']").show();
+  }
+  function hideLoader() {
+	  $("*[data-loader='y']").hide();
+  }
+  
+  function daysInMonth(month,year) {
+	  return new Date(year, month, 0).getDate();
+  }
+  
+  function showErrorAlert(container, text) {
+   resetAlert(container);
+   container.html(text);
+   container.addClass("alert alert-danger");
+   container.show();
+  }
 
-function showErrorAlert(container, text) {
-	resetAlert(container);
-	container.html(text);
-	container.addClass("alert alert-danger");
-	container.show();
-}
-function showInfoAlert(container, text) {
-	resetAlert(container);
-	container.html(text);
-	container.addClass("alert alert-info");
-	container.show();
-}
-function showSuccessAlert(container, text) {
-	resetAlert(container);
-	container.html(text);
-	container.addClass("alert alert-success");
-	container.show();
-}
-function resetAlert(container) {
-	container.html("text");
-	container.attr('class','');
-	container.hide();
-}
-function fadeInAndOut(element) {
+  function showWarningAlert(container, text) {
+   resetAlert(container);
+   container.html(text);
+   container.addClass("alert alert-warning");
+   container.show();
+  }
+
+  function showInfoAlert(container, text) {
+   resetAlert(container);
+   container.html(text);
+   container.addClass("alert alert-info");
+   container.show();
+  }
+  function showSuccessAlert(container, text) {
+   resetAlert(container);
+   container.html(text);
+   container.addClass("alert alert-success");
+   container.show();
+  }
+  function resetAlert(container) {
+   container.html("text");
+   container.attr('class','');
+   container.hide();
+  }
+  function fadeInAndOut(element) {
 	element.fadeTo( "slow" , 0.25, function() {
 		element.fadeTo( "slow" , 1.0, function() {
 			fadeInAndOut(element)
 		  });
 	});
 }
+
+  //toggleCheckbox = checkbox when click on table row
+  $.fn.toggleCheckbox = function() {
+	  this.prop('checked', !this.prop('checked'));
+  }
+  $(function ()
+  {
+	  $('.toggleCheckbox tr').click(function() {
+			  $(this).find('td input:checkbox').toggleCheckbox();
+	  })
+	  $('.toggleCheckbox tr td input:checkbox').click(function(event) {
+			  event.stopPropagation();
+	  })
+  });
+  
 
 $(document).ready(function(){
 
