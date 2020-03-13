@@ -204,9 +204,11 @@ $(document).ready(function(){
 				.toggleClass("fa-times");
 			$("#header-welcome").toggle();
 	});
-	
-	$('.footer-menu-btn').click(function(){
-		$('.footer-menu-toggle').toggleClass("fa-minus").toggleClass("fa-plus");
+	$('#footerToggleMenuContainer').on('shown.bs.dropdown', function () {
+		$('.footer-menu-toggle').addClass("fa-minus").removeClass("fa-plus");
+	});
+	$('#footerToggleMenuContainer').on('hidden.bs.dropdown', function () {
+		$('.footer-menu-toggle').removeClass("fa-minus").addClass("fa-plus");
 	});
 	
 	$('.info-box-toggle').click(function(){
