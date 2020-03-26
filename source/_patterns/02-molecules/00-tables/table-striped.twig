@@ -65,6 +65,11 @@
 				<div><h5>Referrer</h5></div>
 			</a>
 		</th>
+		<th>
+			<a>
+				<div><h5>Select</h5></div>
+			</a>
+		</th>
 	</tr>
 </thead>
 <tfoot style="background-color: #f2f2f2;">
@@ -90,12 +95,14 @@
 		26-Jul-2016
 		<sup>17:31</sup>
 	</td>
-	<td>1234567890abc</td>
+	<td><a tabindex="0" role="button" data-toggle="popover" data-trigger="focus hover" data-placement="top" data-html="true"
+                            data-content="Test popover">popovertest</a></td>
 	<td class="icon-cell">
 		{% include "atoms-heartbeat-icon" %}
 	</td>
 	<td>21</td>
 	<td><a class="link">Mr Donald Duck</a></td>
+	<td><input type="checkbox" class="row-selector" /></td>
 </tr>
 <tr class="read">
 	<td class="read-status-cell nowrap-cell">
@@ -121,6 +128,7 @@
 	</td>
 	<td>21</td>
 	<td><a class="link">Mr Donald Duck</a></td>
+	<td><input type="checkbox" class="row-selector" /></td>
 </tr>
 <tr class="read">
 	<td class="read-status-cell nowrap-cell">
@@ -146,6 +154,7 @@
 	</td>
 	<td>21</td>
 	<td><a class="link">Mr Donald Duck</a></td>
+	<td><input type="checkbox" class="row-selector" /></td>
 </tr>
 <tr class="unread">
 	<td class="read-status-cell nowrap-cell">
@@ -172,6 +181,7 @@
 	</td>
 	<td>21</td>
 	<td><a class="link">Mr Donald Duck</a></td>
+	<td><input type="checkbox" class="row-selector" /></td>
 </tr>
 </table>
 

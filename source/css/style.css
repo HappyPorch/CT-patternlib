@@ -540,6 +540,12 @@ padding-left: 20px !important;
 .table-footer {
 text-align: right;
 }
+tr.rowselected {
+  background-color: #ffffe0 !important;
+}
+tr.rowselected {
+  background-color: #ffffe0 !important;
+}
 
 /*Panels*/
 .panel {margin-bottom: 10px;}

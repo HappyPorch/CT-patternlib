@@ -255,4 +255,18 @@ $(document).ready(function(){
 		var btn = $("*[data-ct-collapse-hidetext]", $(this));
 		btn.html(btn.attr("data-ct-collapse-hidetext"));
 	})
+
+	//selectable table rows
+	$('.rows_select_container tr').has('.row-selector').click(function(event) {
+		if ($(event.target).data("toggle")!="popover") {
+			$(this).toggleClass('rowselected');
+			$(this).find('.row-selector').prop('checked', $(this).hasClass('rowselected'));
+		}
+	});
+	$('.row-selector').click(function(event) {
+		row = $(this).closest('tr');
+		row.toggleClass('rowselected');
+		event.stopPropagation();
+	});
+	  
 });
