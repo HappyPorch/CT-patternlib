@@ -1,8 +1,8 @@
 <h1>test</h1>
-<div class="page-info">
+<div class="page-info" data-infobox-ident="rememberCloseState1">
 <div class="clearfix"></div>
-<div class="info-box-toggle pull-right active">{% include "atoms-help-info-button" %}</div>
-{% embed "atoms-info-box-yellow" %}
+<div class="info-box-toggle pull-right">{% include "atoms-help-info-button" %}</div>
+{% embed "atoms-info-box-yellow" with {styleModifier: "hide-info" } %}
 {% block extra %}
 	<div class="info-box-lower-toggle">{% include "atoms-eye-slash" %} Hide this text</div>
 {% endblock %}

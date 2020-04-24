@@ -159,7 +159,7 @@ function hideLoader() {
 			  event.stopPropagation();
 	  })
   });
-  
+
 
 $(document).ready(function(){
 
@@ -211,17 +211,6 @@ $(document).ready(function(){
 		$('.footer-menu-toggle').removeClass("fa-minus").addClass("fa-plus");
 	});
 	
-	$('.info-box-toggle').click(function(){
-		$(this).next().toggleClass('show-info')
-						.toggleClass('hide-info');
-		$(this).toggleClass('active');
-	});
-	$('.info-box-lower-toggle').click(function(){
-		$(this).parent().parent().toggleClass('show-info')
-						.toggleClass('hide-info');
-		$(this).parent().parent().prev().toggleClass('active');
-	});
-	
 	$('.blink').each(function() {
 		var elem = $(this);
 		fadeInAndOut(elem);
@@ -241,7 +230,7 @@ $(document).ready(function(){
 
 	$('.ct-collapse').on('hidden.bs.collapse', function () {
 		//change + icon to -
-		var icon = $("*[data-ct-collaspe-icon='change']", $(this));
+		var icon = $("*[data-ct-collapse-icon='change']", $(this));
 		icon.addClass("fa-plus");
 		icon.removeClass("fa-minus");
 		var btn = $("*[data-ct-collapse-showtext]", $(this));
@@ -270,3 +259,51 @@ $(document).ready(function(){
 	});
 	  
 });
+
+var lStorage = window.localStorage;
+var infoBoxOpenTracker = {};
+$(document).ready(function() {
+	$('.info-box-toggle').click(function(){
+		toggleInfoBox($(this).closest(".page-info"));
+	});
+	$('.info-box-lower-toggle').click(function(){
+		toggleInfoBox($(this).closest(".page-info"));
+	});
+	
+    infoBoxOpenTracker = getInfoBoxState();
+    $("div[data-infobox-ident]").each(function() {
+		var pageInfoDiv = $(this).closest(".page-info");
+        var ident = $(this).attr("data-infobox-ident");
+		var forceState = 0;
+		if (ident in infoBoxOpenTracker) {
+			forceState = (infoBoxOpenTracker[ident]["len"] !== $(pageInfoDiv).html().replace(/\s/g,'').length) ? "on" : infoBoxOpenTracker[ident]["state"];
+		}
+		toggleInfoBox(pageInfoDiv, forceState);
+	});
+});
+function toggleInfoBox(pageInfoDiv, forceState=0) {
+	var box = $(pageInfoDiv).children(".info-box").first();
+	var state = (box.hasClass('show-info')) ? "on" : "off";
+	if (forceState == 0 || state != forceState) {
+		box.toggleClass('show-info').toggleClass('hide-info');
+		$(this).children(".info-box-toggle").toggleClass('active');
+		var ident = $(pageInfoDiv).attr("data-infobox-ident");
+		state = (box.hasClass('show-info')) ? "on" : "off";
+	}
+	saveInfoBoxState(ident, state, $(pageInfoDiv).html().replace(/\s/g,'').length);
+}
+function saveInfoBoxState(ident, state, stringLength) {
+    if (ident) {
+        infoBoxOpenTracker[ident] = { "state" : state, "len" : stringLength };
+        lStorage.setItem('CT-infoBoxOpenTracker', JSON.stringify(infoBoxOpenTracker));
+    }
+}
+function getInfoBoxState() {
+    var data = lStorage.getItem('CT-infoBoxOpenTracker');
+    if (!data) {
+        data = {}; 
+    } else {
+        data = JSON.parse(data);
+    }
+    return data;
+}
