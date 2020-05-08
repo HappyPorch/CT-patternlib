@@ -504,6 +504,9 @@ font-weight: bold;
 .tfoot {
 background-color: #f2f2f2;
 }
+.table.table-striped>thead {
+  background-color: #f9f9f9;
+}
 .table.table-striped>thead>tr>th {
 vertical-align: baseline;
 }
