@@ -281,7 +281,9 @@ $(document).ready(function() {
 		toggleInfoBox(pageInfoDiv, forceState);
 	});
 });
-function toggleInfoBox(pageInfoDiv, forceState=0) {
+function toggleInfoBox(pageInfoDiv, forceState) {
+	forceState = typeof forceState !== 'undefined' ? forceState : 0; //default value pre ES6
+	
 	var box = $(pageInfoDiv).children(".info-box").first();
 	var state = (box.hasClass('show-info')) ? "on" : "off";
 	if (forceState == 0 || state != forceState) {
