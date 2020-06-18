@@ -175,12 +175,7 @@ color: #4d4d4d;
 }
 
 /*Icons*/
-.fa-arrow-left,
-.fa-home,
-.fa-minus,
-.fa-plus,
-.fa-question-circle,
-.fa-sign-out {
+.fa {
 color: #4d4d4d;
 }
 .fa-bars,
