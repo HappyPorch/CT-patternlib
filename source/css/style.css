@@ -371,7 +371,7 @@ header h3::before, header h3::after {
 content: "\25a0";
 margin: 0 2px;white-space: nowrap;
 }
-/* @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
 header h3 {
   font-size: 1.0em;
   color: #000000;
@@ -382,18 +382,18 @@ header h3 {
   max-width: 250px;
   margin-right: 20px;
 }
-} */
+}
 
 @media only screen and (min-width: 1020px) {
 header h3 {
   max-width: inherit;
 }
 }
-/* @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 header h3 {
 display: none;
 }
-} */
+}
 
 /*list-menu : todo: Rocio to update based on design*/
 .breadcrumb {
@@ -652,6 +652,7 @@ font-size: 15px;
 cursor: pointer;
 }
 
+
 /*Media Queries*/
 @media only screen and (min-width: 768px) {
 ul.footer-menu-list {
@@ -683,53 +684,6 @@ ul.footer-menu-list li {
 .header-container {
   min-height: 75px;
 }
-}
-
-@media only screen and (min-width: 1440px){
-  .navbar-expand-xl.navbar-header {
-    float: left;
-  }
-  .navbar-expand-xl .navbar-toggle {
-    display: none;
-  }
-  header h3 {
-    display: none;
-    font-size: 1.0em;
-    color: #000000;
-    font-weight: normal;
-    text-align: center;
-    float: right;
-    margin-top: -25px;
-    max-width: 250px;
-    margin-right: 20px;
-  }
-  .navbar-expand-xl.navbar-top {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    border: none !important;
-  }
-  .navbar-expand-xl.navbar {
-    border-radius: 4px;
-  }
-  .navbar-expand-xl .container-fluid>.navbar-collapse, .navbar-expand-xl .container-fluid>.navbar-header, .navbar-expand-xl .container>.navbar-collapse, .navbar-expand-xl .container>.navbar-header {
-    margin-right: 0;
-    margin-left: 0;
-  }
-  .navbar-expand-xl .navbar-collapse.collapse {
-    display: block!important;
-    height: auto!important;
-    padding-bottom: 0;
-    overflow: visible!important;
-  }
-  .navbar-expand-xl .navbar-right {
-    float: right!important;
-    margin-right: -15px;
-  }
-  .navbar-expand-xl .navbar-nav {
-    float: left;
-    margin: 0;
-  }
 }
 
 
