@@ -686,6 +686,33 @@ ul.footer-menu-list li {
 }
 }
 
+
+@media only screen and (max-width: 1440px){
+  .navbar-expand-xl.navbar-header {
+    float: none;
+  }
+  .navbar-expand-xl .navbar-toggle {
+    display: block;
+  }
+  .navbar-expand-xl.navbar-top{
+    position: relative;
+    width: 100%;
+    border: 2px solid #cae3f2 !important;
+  }
+  .navbar-expand-xl .container-fluid>.navbar-collapse, .navbar-expand-xl .container-fluid>.navbar-header, .navbar-expand-xl .container>.navbar-collapse, .navbar-expand-xl .container>.navbar-header {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .navbar-expand-xl .navbar-collapse.collapse {
+  display: none!important;
+  }
+  .navbar-expand-xl .navbar-collapse.collapse.in{
+    display: block!important;
+  }
+   
+
+}
+
 @media only screen and (min-width: 1440px){
   .navbar-expand-xl.navbar-header {
     float: left;
