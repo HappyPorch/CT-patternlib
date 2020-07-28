@@ -275,6 +275,20 @@ margin-bottom: 10px;
   padding: .75rem 1.25rem
 }
 
+.alert-success .alert-link {
+  margin-top: 1.5rem;
+  color: #0b2e13;
+  padding: 0;
+  text-decoration: underline;
+}
+
+code.copyable {
+  display: block;
+  padding: 4px;
+  border: 1px dashed #ccc;
+  margin-top: 1.5rem;
+}
+
 /*Forms*/
 /* removed classes not needed: can use bootstrap classes: http://getbootstrap.com/css/#forms-control-validation */
 fieldset {
@@ -324,6 +338,9 @@ margin-top:0px;
 }
 #pw_valid_reponse .alert{
   margin-bottom: 0;
+}
+#ValidationMsg{
+  margin-bottom: 1.5rem;
 }
 
 
