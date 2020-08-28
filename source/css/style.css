@@ -174,6 +174,11 @@ color: #4d4d4d;
   white-space: normal; 
 }
 
+#login-reminder-content h3{
+  text-align: left;
+  margin: 1.5rem 0;
+}
+
 /*Icons*/
 .fa {
 color: #4d4d4d;
@@ -264,6 +269,26 @@ margin-bottom: 10px;
   margin-top: .4em;
 }
 
+/*Alerts*/
+.alert{
+  margin: 1.5rem 0;
+  padding: .75rem 1.25rem
+}
+
+.alert-success .alert-link {
+  margin-top: 1.5rem;
+  color: #0b2e13;
+  padding: 0;
+  text-decoration: underline;
+}
+
+code.copyable {
+  display: block;
+  padding: 4px;
+  border: 1px dashed #ccc;
+  margin-top: 1.5rem;
+}
+
 /*Forms*/
 /* removed classes not needed: can use bootstrap classes: http://getbootstrap.com/css/#forms-control-validation */
 fieldset {
@@ -290,6 +315,34 @@ max-width: 120px;
 margin-bottom:0px;
 margin-top:0px;
 }
+
+.control-label{
+  margin-bottom: 0.75rem;
+}
+.password-help__toggle {
+  padding: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+#password-strength-text{
+  margin-top: 0.75rem;
+}
+#pw_valid_reponse .strength1{
+  color: red;
+}
+#pw_valid_reponse .strength2{
+  color: orange;
+}
+#pw_valid_reponse .strength3{
+  color: green;
+}
+#pw_valid_reponse .alert{
+  margin-bottom: 0;
+}
+#ValidationMsg{
+  margin-bottom: 1.5rem;
+}
+
 
 /*Navigation*/
 =======
@@ -655,7 +708,6 @@ font-size: 15px;
 cursor: pointer;
 }
 
-
 /*Media Queries*/
 @media only screen and (min-width: 768px) {
 ul.footer-menu-list {
@@ -940,7 +992,7 @@ body.modal-open .modal {
   left: 50%;
   top: 50%;
   margin-top: 4.5em;
-  z-index: 999;
+  z-index: 9999;
   text-align: center;
   width: 180px;
   transform: translate(-50%,-50%);
@@ -949,7 +1001,7 @@ body.modal-open .modal {
 /* Absolute Center Spinner */
 .loading {
 position: fixed;
-z-index: 999;
+z-index: 9999;
 height: 2em;
 width: 2em;
 overflow: show;
@@ -1058,3 +1110,6 @@ box-shadow: rgb(255,156,0) 1.5em 0 0 0, rgb(255,156,0) 1.1em 1.1em 0 0, rgb(255,
   transform: rotate(360deg);
 }
 }
+
+
+
