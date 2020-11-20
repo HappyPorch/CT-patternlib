@@ -12,8 +12,12 @@ Welcome to the CT pattern library! In this repo we provide developers and design
 
 Every time you wish to see the changes you've made to `.twig` files reflected in the front-end, you must do the following:
 
-1. Figure out the steps
-1. Write them here
+1. Run `vagrant ssh` at the root of the Vagrant box to open an SSH session with the virtual machine
+1. Run `cd /var/www/ct-patternlib.local/public` to go into the `public` directory of the `patternlib`
+1. Run `php core/console --generate` to generate the new version front-end website
+1. Refresh the page and enjoy and your changes :)
+
+
 
 ## Other pages
 - [Original Pattern Lib Docs](docs/OriginalDoc.md)
