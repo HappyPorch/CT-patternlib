@@ -1,8 +1,8 @@
-# CT Pattern Lab
+# CT Pattern Lib
 
 Welcome to the CT pattern library! In this repo we provide developers and designers a clean and stable base from which to develop a Twig-based pattern library to be reused in the CT Website.
 
-## Running the Pattern Lab
+## Running the Pattern Lib
 
 1. [Setup your CT Vagrant box](https://endzonesoftware.atlassian.net/wiki/spaces/CT/pages/137789445/Local+dev+setup+for+Web+app+API)
 1. Run the box with the `vagrant up` command
@@ -19,7 +19,7 @@ In order to enable it, you must run the watcher process that will update the pat
 1. Run `php core/console --watch` to run the watcher that will observe changes to `.twig` files in the library
 1. Your changes should be reflected in the front-end (with a slight delay) every time you save them :) 
 
-## Updating the Pattern Lab Front-end
+## Manually updating the Pattern Lib Front-end
 
 If for some reason you aren't able to use the hot-reloading feature of the library, then you must generate the front-end yourself after every change
 
