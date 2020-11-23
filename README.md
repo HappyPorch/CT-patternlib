@@ -6,7 +6,7 @@ Welcome to the CT pattern library! In this repo we provide developers and design
 
 1. [Setup your CT Vagrant box](https://endzonesoftware.atlassian.net/wiki/spaces/CT/pages/137789445/Local+dev+setup+for+Web+app+API)
 1. Run the box with the `vagrant up` command
-1. Access the library via `http://ct-patternlib.local/public/`
+1. Access the library via [http://ct-patternlib.local/public/](http://ct-patternlib.local/public/)
 
 ## Hot-Reloading Capabilities
 
