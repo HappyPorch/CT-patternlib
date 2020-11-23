@@ -175,8 +175,9 @@ function validateGroup(){
 	var selectedGroup = $("input:radio[name='group']:checked");
 	if (selectedGroup.length === 1) {
 		var groupId = selectedGroup.val();
+		var networkId = $('#referrer_destination_network_id').val();
 		$("#group_span").html("Checking the group...");
-		var url = 'group.php?network_id={{ model.network_id }}&action=validateAllocGroup&group='+groupId;
+		var url = 'group.php?network_id=' + networkId + '&action=validateAllocGroup&group='+groupId;
 		$.post( url, { },
 				function( html ) {
 					if (html.indexOf("<head>") !== -1) {

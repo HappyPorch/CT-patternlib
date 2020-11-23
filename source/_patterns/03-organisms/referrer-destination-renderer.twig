@@ -1,5 +1,20 @@
 {% include "molecules-referrer-destination-form" with {
   model:{
-    has_alloc_groups: true
+    has_alloc_groups: true,
+    network_id: 4,
+    alloc_groups: [
+      {
+        value: 23,
+        name: "Barry's Group"
+      },
+      {
+        value: 24,
+        name: "Pedro's Group"
+      },
+      {
+        value: 25,
+        name: "Filipe's Group"
+      }
+    ]
   }
 } %}
