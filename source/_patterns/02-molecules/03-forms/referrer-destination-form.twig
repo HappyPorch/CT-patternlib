@@ -1,39 +1,39 @@
-<div class="container">
-    <form class="form-horizontal">
-<fieldset>
 <div class="form-group">
-	<label for="" class="col-sm-2 control-label">Referrer Destination:</label>
+	{# Case to be sent to #}
+	<label for="" class="col-sm-2 control-label">Case to be sent to:</label>
+
+  {# Coordinator #}
 	<div class="col-sm-10">
-        <div class="row">
-            <div class="col-xs-4">
-                <input maxlength="10" type="number" size="10" id="age" name="age" onkeyup="dob_disabled()" onchange="select_unit()" class="form-control" />
-            </div>
-            <div class="col-xs-4">
-                <select name="age_unit" id="age_unit" onchange="select_unit()" class="form-control">
-                    <option value=""></option>
-                    <option value="yr">DESTINATION</option>
-                    <option value="mon">months</option>
-                    <option value="wk">weeks</option>
-                    <option value="day">days</option>
-                  </select>
-            </div>
-        </div>
-        <span id = "spanUnit" class="red"></span>
-	  <span id="helpBlock" class="help-block">Enter patient age</span>
+		<div class="radio">
+			<label>
+				<input type='radio' name='group' value='' id='group_0' onclick='validateGroup()' {{ not model.has_alloc_groups ? "checked='checked'" }} data-ct-required="true"/>
+				Coordinator
+			</label>
+		</div>
+
+    {# Dynamic Groups #}
+		{% if model.has_alloc_groups %}
+			{% for group in model.alloc_groups %}
+				<div class="radio">
+					<label>
+            <input type='radio' name='group' value='{{ group.value }}' id='group_{{ loop.index }}' onclick='validateGroup()' data-ct-required="true"/>
+						{{ group.name }}
+          </label>
+				</div>
+			{% endfor %}
+		{% endif %}
+    
+		<span id='group_span'></span>
+		{% if model.has_alloc_groups %}
+			{# Select who you would like the case to be sent to #}
+			<span id="helpBlock" class="help-block">
+        Select who you would like the case to be sent to (or select <b>Coordinator</b> if you want the Coordinator to choose the specialist for you)
+      </span>
+		{% else %}
+			{# Coordinator will choose the specialist for you #}
+			<span id="helpBlock" class="help-block">
+        (the Coordinator will choose the specialist for you)
+      </span>
+		{% endif %}
 	</div>
-</div>
-<div class="form-group">
-	<div class="col-sm-12">
-	  <p class="form-control-static">or</p>
-	</div>
-</div>
-<div class="form-group">
-	<label for="" class="col-sm-2 control-label">Date of Birth:</label>
-	<div class="col-sm-10">
-		{% include "atoms-dob-field" %}
-	  <span id="helpBlock" class="help-block">Enter patient date of birth.</span>
-	</div>
-</div>
-</fieldset>
-</form>
 </div>
