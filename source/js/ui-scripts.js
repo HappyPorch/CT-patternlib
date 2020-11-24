@@ -170,26 +170,49 @@ function fadeInAndOut(element) {
 	});
 }
 
+var groupMockHtml = " <style>#group_span fieldset{margin-top: 15px;}#group_span fieldset legend{width: auto; margin-bottom: 0; border-bottom: 0; font-size: 1.2em;}#group_span fieldset b{font-weight: normal;}</style> <fieldset> <legend> Automatic selection </legend> <b>One specialist will be selected automatically from:</b><br/> &nbsp&nbsp&nbsp&nbsp<b>Dr Roland Rat</b><br/> &nbsp&nbsp&nbsp&nbsp<b>Professor Wise Old Owl</b><br/> &nbsp&nbsp&nbsp&nbsp<b>Mr Fred Flintstone</b><br/> </fieldset>"
+
 function validateGroup(){
+
+	function _updateHtml(html){
+		if (html.indexOf("<head>") !== -1) {
+			$("#group_span").html("Unable to display group details..."); // a full html page has been returned = probably an error page!
+		} else {
+			$("#group_span").html(html);
+		}
+	}
+
+	function _callApi(networkId, groupId){
+		var url = 'group.php?network_id=' + networkId + '&action=validateAllocGroup&group='+groupId;
+
+		$.post( url, { } ,_updateHtml, "html").fail(function() {
+				$("#group_span").html("Error displaying group details...");
+				console.error("Alloc Group display failed!");
+			});
+	}
+
+	function _runMock(){
+		//Set timeout to simulate an API call delay
+		setTimeout(function(){
+			_updateHtml(groupMockHtml);
+		}, 1000)
+	}
+
 	resetAlert($("#ValidationMsg"));
+	
 	var selectedGroup = $("input:radio[name='group']:checked");
 	if (selectedGroup.length === 1) {
 		var groupId = selectedGroup.val();
 		var networkId = $('#referrer_destination_network_id').val();
 		$("#group_span").html("Checking the group...");
-		var url = 'group.php?network_id=' + networkId + '&action=validateAllocGroup&group='+groupId;
-		$.post( url, { },
-				function( html ) {
-					if (html.indexOf("<head>") !== -1) {
-						$("#group_span").html("Unable to display group details..."); // a full html page has been returned = probably an error page!
-					} else {
-						$("#group_span").html(html);
-					}
-				}, "html"
-			).fail(function() {
-				$("#group_span").html("Error displaying group details...");
-				console.error("Alloc Group display failed!");
-			});
+
+		var mockMarker = $("#pattern_lib_mock_marker");
+		if(mockMarker && mockMarker.val() == "true"){
+			_runMock()
+		}else{
+			_callApi(networkId, groupId);
+		}
+	
 	}
 }
 
