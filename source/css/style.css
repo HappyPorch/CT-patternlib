@@ -156,37 +156,6 @@ a.footer-txtlink:before {
   filter: alpha(opacity=25);
   opacity: 0.25;
 }
-.text-red,
-.red,
-.text-fail,
-.text-red.fa {
-  color: #ff0303;
-}
-.text-success {
-  color: #00494f;
-}
-
-.small-note {
-  font-weight: normal;
-  font-size: 9px;
-  font-style: italic;
-  color: #4d4d4d;
-}
-.popover-content {
-  font-weight: normal;
-  font-size: 12px;
-  color: #4d4d4d;
-}
-
-.dl-horizontal dt {
-  overflow: visible;
-  white-space: normal;
-}
-
-#login-reminder-content h3 {
-  text-align: left;
-  margin: 1.5rem 0;
-}
 
 /*Icons*/
 .fa {
@@ -222,6 +191,105 @@ a.footer-txtlink:before {
 .fa-paperclip {
   color: #333333;
 }
+
+.text-red,
+.red,
+.text-fail,
+.text-red.fa {
+  color: #ff0303;
+}
+
+/* bootstrap text colour overrides */
+
+.text-success {
+  color: #3c763d;
+}
+a.text-success:hover,
+a.text-success:focus {
+  color: #2b542c;
+}
+.text-info {
+  color: #31708f;
+}
+a.text-info:hover,
+a.text-info:focus {
+  color: #245269;
+}
+.text-warning {
+  color: #8a6d3b;
+}
+a.text-warning:hover,
+a.text-warning:focus {
+  color: #66512c;
+}
+.text-danger {
+  color: #a94442;
+}
+a.text-danger:hover,
+a.text-danger:focus {
+  color: #843534;
+}
+
+
+.text-NMW_no {
+  color: #ff0000;
+}
+a.text-NMW_no:hover,
+a.text-NMW_no:focus {
+  color: #ff0000;
+}
+.text-NMW_probno {
+  color: #f29797;
+}
+a.text-NMW_probno:hover,
+a.text-NMW_probno:focus {
+  color: #f29797;
+}
+.text-NMW_unable {
+  color: #696969;
+}
+a.text-NMW_unable:hover,
+a.text-NMW_unable:focus {
+  color: #696969;
+}
+.text-NMW_probyes {
+  color: #05c10552;
+}
+a.text-NMW_probyes:hover,
+a.text-NMW_probyes:focus {
+  color: #05c10552;
+}
+.text-NMW_yes {
+  color: #60B044;
+}
+a.text-NMW_yes:hover,
+a.text-NMW_yes:focus {
+  color: #60B044;
+}
+
+
+.small-note {
+  font-weight: normal;
+  font-size: 9px;
+  font-style: italic;
+  color: #4d4d4d;
+}
+.popover-content {
+  font-weight: normal;
+  font-size: 12px;
+  color: #4d4d4d;
+}
+
+.dl-horizontal dt {
+  overflow: visible;
+  white-space: normal;
+}
+
+#login-reminder-content h3 {
+  text-align: left;
+  margin: 1.5rem 0;
+}
+
 
 /*Buttons*/
 .btn {
@@ -364,7 +432,6 @@ label .help-block {
 }
 
 /*Navigation*/
-
 .select-group select {
   display: inline;
   width: 80px !important;
@@ -640,6 +707,9 @@ tr.rowselected {
 }
 .bg-light-blue > .panel-title .btn {
   color: #4d4d4d;
+}
+.dl-horizontal.display-policy {
+  max-width: 80%;
 }
 
 /* from https://scotch.io/bar-talk/different-tricks-on-how-to-make-bootstrap-columns-all-the-same-height */
